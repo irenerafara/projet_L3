@@ -13,8 +13,8 @@ class ANR_Controller extends CI_Controller {
     protected $_DATA = array();
 
     //Default items that must e used in all pages
-    protected $_default_js = array("plugins/bootstrap/bootstrap.min.css", "plugins/bootstrap/bootstrap-grid.min.css", "plugins/bootstrap/bootstrap-reboot.min.css", "plugins/chartist-js/dist/chartist.min.css", "plugins/chartist-js/dist/chartist-init.css", "plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css", "plugins/c3-master/c3.min.css", "style.css", "blue.css");
-    protected $_default_css = array("plugins/jquery/jquery-3.3.1.min.js", "plugins/bootstrap/bootstrap.min.js", "plugins/bootstrap/bootstrap.bundle.min.js", "plugins/bootstrap/tether.min.js", "jquery.slimscroll.js", "waves.js", "sidebarmenu.js", "custom.min.js", "dashboard1.js",
+    protected $_default_css = array("plugins/bootstrap/bootstrap.min.css", "plugins/bootstrap/bootstrap-grid.min.css", "plugins/bootstrap/bootstrap-reboot.min.css", "plugins/chartist-js/dist/chartist.min.css", "plugins/chartist-js/dist/chartist-init.css", "plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css", "plugins/c3-master/c3.min.css", "style.css", "blue.css");
+    protected $_default_js = array("plugins/jquery/jquery-3.3.1.min.js", "plugins/bootstrap/bootstrap.min.js", "plugins/bootstrap/bootstrap.bundle.min.js", "plugins/bootstrap/tether.min.js", "jquery.slimscroll.js", "waves.js", "sidebarmenu.js", "custom.min.js", "dashboard1.js",
                                         "plugins/sticky-kit-master/dist/sticky-kit.min.js", "plugins/chartist-js/dist/chartist.min.js", "plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js", "plugins/d3/d3.min.js", "plugins/c3-master/c3.min.js");
 
     //can be left empty               
