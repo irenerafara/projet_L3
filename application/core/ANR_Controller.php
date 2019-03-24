@@ -24,6 +24,10 @@ class ANR_Controller extends CI_Controller {
 
     //for session control
     protected $_secure = true;
+    protected $_load_menus = true;
+
+    //coontrol des profils
+    protected $_profils = array('A');
 
     //Page title that appear on top
     protected $_page_title = "ANOR";
@@ -31,6 +35,15 @@ class ANR_Controller extends CI_Controller {
     //Default constructor
     public function __construct() {
         parent::__construct();
+        if($this -> _secure) {
+            var_dump($this->session->all_userdata()); die;
+            $session_user = $this -> session -> userdata("session_utilisateur");
+            if(!isset($session_user)) {
+                redirect("authentification");
+            } else {
+                var_dump($session_user); die;
+            }
+        }
     }
 
     public function loadData($index, $value) {
@@ -45,6 +58,7 @@ class ANR_Controller extends CI_Controller {
         $this -> _DATA['js'] = array_merge($this -> _default_js, $this -> _js );
         $this -> loadData('page', $page_url );
         $this -> loadData('page_title', $this -> _page_title );
+        $this -> loadData('load_menus', $this -> _load_menus );
 
         foreach($this -> _models as $model) {
             $this -> load -> model($model);

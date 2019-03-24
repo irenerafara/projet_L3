@@ -15,7 +15,7 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <div id="main-wrapper">
-        <?php $this -> load -> view('common/_menus') ?>
+        <?php if($load_menus) $this -> load -> view('common/_menus') ?>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
