@@ -1,0 +1,21 @@
+#login-form input {
+    width: 300px;
+    margin-left: 10px;
+}
+#login-form {
+    width: 450px;
+    margin-left: 25%;
+    margin-top: 20px;
+    background: #abc8e0;
+    padding: 10px;
+    border-radius: 3%;
+}
+button {
+    float: right;
+}
+.page-wrapper {
+    background: #fff;
+}
+h2 {
+    text-align: center
+}
