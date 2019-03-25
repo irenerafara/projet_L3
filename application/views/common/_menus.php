@@ -64,20 +64,30 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/utilisateur") ?>" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Utilisateur</span></a>
+                </li> 
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/exportation") ?>" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Exportation</span></a>
                 </li>
-                <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profile</span></a>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/comptoir_de_fonte") ?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Comptoir de fonte</span></a>
                 </li>
-                <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Basic Table</span></a>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/comptoir_commerciale") ?>" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Comptoir commerciale</span></a>
                 </li>
-                <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Icons</span></a>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/collecteur_cat2") ?>" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Collecteur catégorie2</span></a>
                 </li>
-                <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Google Map</span></a>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/collecteur_cat1") ?>" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Collecteur catégorie1</span></a>
                 </li>
-                <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Blank Page</span></a>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/orpailleur") ?>" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Orpailleur</span></a>
                 </li>
-                <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Error 404</span></a>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/formation") ?>" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Formation</span></a>
                 </li>
+                <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/carte") ?>" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Carte</span></a>
+               </li>
+               <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/province") ?>" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Province</span></a>
+              </li>
+              <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/region") ?>" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Region</span></a>
+             </li>
+             <li> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/commune") ?>" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Commune</span></a>
+             </li>
             </ul>
             <div class="text-center m-t-30">
                 <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-warning hidden-md-down"> Upgrade to Pro</a>

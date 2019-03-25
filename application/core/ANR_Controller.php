@@ -32,16 +32,18 @@ class ANR_Controller extends CI_Controller {
     //Page title that appear on top
     protected $_page_title = "ANOR";
 
+    //Folder of the module
+    protected $_folder = ""; //style nom_repertoire/
+
     //Default constructor
     public function __construct() {
         parent::__construct();
         if($this -> _secure) {
-            var_dump($this->session->all_userdata()); die;
             $session_user = $this -> session -> userdata("session_utilisateur");
             if(!isset($session_user)) {
                 redirect("authentification");
-            } else {
-                var_dump($session_user); die;
+            } else if(!in_array($session_user['TypeUtilisateur'], $this -> _profils)) {
+                redirect('home/message');
             }
         }
     }
@@ -56,7 +58,7 @@ class ANR_Controller extends CI_Controller {
     public function loadPage($page_url) {
         $this -> _DATA['css'] = array_merge($this -> _default_css, $this -> _css );
         $this -> _DATA['js'] = array_merge($this -> _default_js, $this -> _js );
-        $this -> loadData('page', $page_url );
+        $this -> loadData('page', $this-> _folder.$page_url );
         $this -> loadData('page_title', $this -> _page_title );
         $this -> loadData('load_menus', $this -> _load_menus );
 

@@ -15,4 +15,8 @@ class Home extends ANR_Controller {
     public function index() {
         $this -> loadPage('test');
     }
+
+    public function message() {
+        $this -> loadPage('common/error_profil_access');
+    }
 }
