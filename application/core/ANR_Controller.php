@@ -13,9 +13,8 @@ class ANR_Controller extends CI_Controller {
     protected $_DATA = array();
 
     //Default items that must e used in all pages
-    protected $_default_css = array("plugins/bootstrap/bootstrap.min.css", "plugins/bootstrap/bootstrap-grid.min.css", "plugins/bootstrap/bootstrap-reboot.min.css", "plugins/chartist-js/dist/chartist.min.css", "plugins/chartist-js/dist/chartist-init.css", "plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css", "plugins/c3-master/c3.min.css", "style.css", "blue.css");
-    protected $_default_js = array("plugins/jquery/jquery-3.3.1.min.js", "plugins/bootstrap/bootstrap.min.js", "plugins/bootstrap/bootstrap.bundle.min.js", "plugins/bootstrap/tether.min.js", "jquery.slimscroll.js", "waves.js", "sidebarmenu.js", "custom.min.js", "dashboard1.js",
-                                        "plugins/sticky-kit-master/dist/sticky-kit.min.js", "plugins/chartist-js/dist/chartist.min.js", "plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js", "plugins/d3/d3.min.js", "plugins/c3-master/c3.min.js");
+    protected $_default_css = array("plugins/bootstrap/bootstrap.min.css","sb-admin.css", "vendor/fontawesome-free/css/all.min.css", "vendor/datatables/dataTables.bootstrap4.css"); 
+    protected $_default_js = array("vendor/jquery/jquery.min.js", "vendor/datatables/dataTables.bootstrap4.js", "vendor/datatables/jquery.dataTables.js", "vendor/chart.js/Chart.min.js", "vendor/bootstrap/js/bootstrap.bundle.min.js", "plugins/datatables-demo.js","plugins/chart-area-demo.js", "sb-admin.min.js");
 
     //can be left empty               
     protected $_css = array();
@@ -38,6 +37,9 @@ class ANR_Controller extends CI_Controller {
     //Default constructor
     public function __construct() {
         parent::__construct();
+        foreach($this -> _models as $model) {
+            $this -> load -> model($model);
+        }
         if($this -> _secure) {
             $session_user = $this -> session -> userdata("session_utilisateur");
             if(!isset($session_user)) {
@@ -62,9 +64,7 @@ class ANR_Controller extends CI_Controller {
         $this -> loadData('page_title', $this -> _page_title );
         $this -> loadData('load_menus', $this -> _load_menus );
 
-        foreach($this -> _models as $model) {
-            $this -> load -> model($model);
-        }
+        
         $this -> load -> view('common/_layout', $this -> _DATA );
     }
 }

@@ -31,7 +31,9 @@
         }
 
         public function deconnexion() {
-            $this->session->unset_userdata('session_utilisateur');
+            $this->session->unset_userdata('session_utilisateur'); var_dump('ok');
+            redirect('home');
+            
         }
     }
 ?>
