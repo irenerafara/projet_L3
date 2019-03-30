@@ -1,0 +1,10 @@
+small.error {
+    display: none;
+    color: #f30d0d !important;
+    text-align: right;
+    width: 100%;
+    padding-right: 7%;
+}
+form input.hasError {
+    border: 1px solid #f30d0d;
+}
