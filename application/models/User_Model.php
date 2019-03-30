@@ -13,10 +13,11 @@ class User_Model extends ANR_Model{
     }
 
     public function validate(){
+
         // grab user input
         $username = $this->security->xss_clean($this->input->post('username'));
         $password = $this->security->xss_clean($this->input->post('password'));
-        
+   
         // Prep the query
         $this -> db -> where('EmailUtilisateur', $username)
                     -> where('MotDePasseUtilisateur', sha1($password."*"));

@@ -1,6 +1,6 @@
 
 <div id='login-form' class = "row">
-    <form action="" method='post' name='process' enctype="multipart/form-data">
+    <form action="Authentification" method='post' name='process' enctype="multipart/form-data">
         <h2>User Login</h2>
         <br />    
         <div class = "alert alert-danger" <?php if(!isset($erreur)) echo 'style = "display: none"' ?> ><?php if(isset($erreur)) echo $erreur; ?></div>

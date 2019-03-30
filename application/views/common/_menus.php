@@ -24,7 +24,7 @@
           <span>Comptoirs</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/comptoir/comptoir_fonte') ?>">comptoir de fonte</a></h6>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/comptoir/comptoir_de_fonte') ?>">comptoir de fonte</a></h6>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/comptoir/comptoir_commerciale') ?>">comptoir commerciale</a></h6>
           <div class="dropdown-divider"></div>

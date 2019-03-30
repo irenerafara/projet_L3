@@ -13,8 +13,8 @@ class ANR_Controller extends CI_Controller {
     protected $_DATA = array();
 
     //Default items that must e used in all pages
-    protected $_default_css = array("plugins/bootstrap/bootstrap.min.css","sb-admin.css", "vendor/fontawesome-free/css/all.min.css", "vendor/datatables/dataTables.bootstrap4.css"); 
-    protected $_default_js = array("vendor/jquery/jquery.min.js", "vendor/datatables/dataTables.bootstrap4.js", "vendor/datatables/jquery.dataTables.js", "vendor/chart.js/Chart.min.js", "vendor/bootstrap/js/bootstrap.bundle.min.js", "plugins/datatables-demo.js","plugins/chart-area-demo.js", "sb-admin.min.js");
+    protected $_default_css = array("plugins/bootstrap/bootstrap.min.css","sb-admin.css", "vendor/fontawesome-free/css/all.min.css", "vendor/datatables/dataTables.bootstrap4.css", "default.css"); 
+    protected $_default_js = array("vendor/jquery/jquery.min.js", "vendor/datatables/dataTables.bootstrap4.js", "vendor/datatables/jquery.dataTables.js", "vendor/bootstrap/js/bootstrap.bundle.min.js", "plugins/datatables-demo.js", "default.js", "sb-admin.min.js");
 
     //can be left empty               
     protected $_css = array();
@@ -45,7 +45,7 @@ class ANR_Controller extends CI_Controller {
             if(!isset($session_user)) {
                 redirect("authentification");
             } else if(!in_array($session_user['TypeUtilisateur'], $this -> _profils)) {
-                redirect('home/message');
+               redirect('/home/message');
             }
         }
     }

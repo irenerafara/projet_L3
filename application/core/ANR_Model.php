@@ -18,9 +18,9 @@ class ANR_Model extends CI_Model {
 
     public function save($data_to_save, $id = null) {
         if($id) {
-            return $this -> db -> where($this -> _key, $id) -> update($this -> _table, $data);
+            return $this -> db -> where($this -> _key, $id) -> update($this -> _table, $data_to_save);
         } else {
-            return $this -> db -> insert($this -> _table, $data);
+            return $this -> db -> insert($this -> _table, $data_to_save);
         }
     }
 

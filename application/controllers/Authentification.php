@@ -14,6 +14,10 @@
         }
 
         public function index() {
+            $session_user = $this -> session -> userdata("session_utilisateur");
+            if(isset($session_user)) {
+                redirect("home");
+            }
             if($_POST) {
                 if($this -> input -> post('username') && $this -> input -> post('password')) {
                     $this -> load -> model('user_model');
@@ -33,7 +37,6 @@
         public function deconnexion() {
             $this->session->unset_userdata('session_utilisateur'); var_dump('ok');
             redirect('home');
-            
         }
     }
 ?>
