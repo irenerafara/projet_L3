@@ -46,7 +46,15 @@
               <input type="email" class="form-control" id="EmailUtilisateur" name ="EmailUtilisateur" placeholder="email" required>
               <small class="form-text text-muted error"></small>
           </div>
-        <div class="form-group form-inline">
+          <div class="form-group form-inline" id = "check-group">
+              <label class = "col-sm-6" for="reinit-password">Réinitialiser mot de passe</label>
+              <input type="checkbox" class="form-control" id="reinit-password" >
+          </div>
+          <div class="form-group form-inline" id = "reinit-group">
+              <label class = "col-sm-6" for="random-input">Nouveau mot de passe</label>
+              <input type="text" disabled = "disabled" class="form-control" id="random-input" >
+          </div>
+        <div class="form-group form-inline" id = "password-group">
               <label class = "col-sm-6" for="MotDePasseUtilisateur">Mot de passe utilisateur</label>
               <input type="password" class="form-control" id="MotDePasseUtilisateur" name = "MotDePasseUtilisateur" placeholder="Password">
               <small class="form-text text-muted error"></small>

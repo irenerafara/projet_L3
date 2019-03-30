@@ -15,9 +15,8 @@ class Exportateur extends ANR_Controller {
         $this->loadData('exportateurs',$exportateurs);
         $this -> loadPage('accueil');
     }
-    }
-    public function Enregistrer_Exportateur()
-    {
+
+    public function Enregistrer_Exportateur() {
         if($_POST) {
             extract($_POST);
             $info_exportateur = array('NomSocieteExportateur' => $NomSocieteExportateur,

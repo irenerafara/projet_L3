@@ -1,3 +1,4 @@
+var randomPassWord = ['TempPass484YS5','TempPassP45Y95','TempPassT7Uw58', 'TempPassU1313FG', 'PassTemp1516UhUs', "PassTempU1516X", "PassX156Temp4R", "TempEX1564Gpass"]
 $(document).ready(function() {
     $('#form-add-user').on('submit', function(e) {
         e.preventDefault();
@@ -25,8 +26,21 @@ $(document).ready(function() {
 
     $('#button-add').on('click', function() {
         $('#form-add-user input').val('')
+        $('#check-group, #reinit-group').hide()
+        $('#password-group').show()
     })
 
+    $('#reinit-password').on('change', function() {
+        if($(this).is(':checked')) {
+            $('#reinit-group').show()
+            var indexpass = getRandomInteger(0, randomPassWord.length)
+            var passWord = randomPassWord[indexpass]
+            $("#random-input, #MotDePasseUtilisateur").val(passWord)
+        } else {
+            $('#reinit-group').hide()
+            $("#random-input, #MotDePasseUtilisateur").val("")
+        }
+    })
 })
 
 function edit_user(id) {
@@ -38,7 +52,9 @@ function edit_user(id) {
     $('#ContactUtilisateur').val(tr.find('td').eq(3).html())
     $('#TypeUtilisateur').val($.trim(tr.find('td').eq(4).html()))
     $('#EmailUtilisateur').val(tr.find('td').eq(5).html())
-    $('#MotDePasseUtilisateur').val(tr.find('td').eq(6).html())
+    $('#MotDePasseUtilisateur').val('').parent().hide()
+    $('#check-group').show()
+    $('#reinit-group').hide()
     $('#addUserModal').modal('show')
 }
 

@@ -19,13 +19,22 @@ class Utilisateur extends ANR_Controller {
     public function enregistrer_utilisateur() {
         if($_POST) {
             extract($_POST);
-            $info_user = array('NomUtilisateur' => $NomUtilisateur,
+            if($MotDePasseUtilisateur) {
+                $info_user = array('NomUtilisateur' => $NomUtilisateur,
                                 'PrenomUtilisateur' => $PrenomUtilisateur,
                                 'AdresseUtilisateur' => $AdresseUtilisateur,
                                 'ContactUtilisateur' => $ContactUtilisateur,
                                 'TypeUtilisateur' => $TypeUtilisateur,
                                 'EmailUtilisateur' => $EmailUtilisateur,
                                 'MotDePasseUtilisateur' => sha1($MotDePasseUtilisateur."*"));
+            } else {
+                $info_user = array('NomUtilisateur' => $NomUtilisateur,
+                                'PrenomUtilisateur' => $PrenomUtilisateur,
+                                'AdresseUtilisateur' => $AdresseUtilisateur,
+                                'ContactUtilisateur' => $ContactUtilisateur,
+                                'TypeUtilisateur' => $TypeUtilisateur,
+                                'EmailUtilisateur' => $EmailUtilisateur);
+            }
             $res = $this -> User_model -> save($info_user, $IDUtilisateur ? $IDUtilisateur : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {

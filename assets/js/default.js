@@ -6,7 +6,6 @@ function base_url(withindex) {
 function form_validate(selector) {
     var form = $(selector)
     var formValide = true
-    console.log('call')
     form.find('input').each(function() {
         var input = $(this)
         if(input.attr('type') == "text") {
@@ -54,7 +53,7 @@ function form_validate(selector) {
                 input.removeClass('hasError')
                 input.parent().find('small.error').hide()
             }
-        } else if(input.attr('type') == "password") {
+        } else if(input.attr('type') == "password" && input.is(':visible')) {
             var strongPassRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/
             if($.trim(input.val()) == "") {
                 input.addClass('hasError')
@@ -71,4 +70,8 @@ function form_validate(selector) {
         }
     })
     return formValide
+}
+
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
 }
