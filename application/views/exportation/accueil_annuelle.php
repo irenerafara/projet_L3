@@ -7,7 +7,7 @@
     <div class="card-header">
       <i class="fas fa-table"></i>
       Exportation
-      <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addUserModal"><i class="fas fa-plus"></i> Ajouter</button>
+      <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addExportationModal"><i class="fas fa-plus"></i> Ajouter</button>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -23,8 +23,8 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach($exportations as $exportation){
-              extract((array) $exportation); ?>
+            <?php foreach($annuelles as $annuelle){
+              extract((array) $annuelle); ?>
               <tr id = "exp-<?php echo $IDExportation; ?>">
                 <td><?php echo $AnneeExportation; ?></td>
                 <td><?php echo $MoisExportation; ?></td>
@@ -47,4 +47,4 @@
   </div>
        
 </div>
-<?php $this -> load -> view('exportation/modal_add') ?>
+<?php $this -> load -> view('exportation/modal1_add') ?>

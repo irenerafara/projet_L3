@@ -50,8 +50,14 @@ class ANR_Controller extends CI_Controller {
         }
     }
 
+    //Load data into controller
     public function loadData($index, $value) {
         $this -> _DATA[$index] = $value ;
+    }
+
+    //Load Page without other contents
+    public function loadPageAjax($view) {
+        $this -> load -> view($this-> _folder."$view", $this -> _DATA);
     }
 
     /**
@@ -63,7 +69,6 @@ class ANR_Controller extends CI_Controller {
         $this -> loadData('page', $this-> _folder.$page_url );
         $this -> loadData('page_title', $this -> _page_title );
         $this -> loadData('load_menus', $this -> _load_menus );
-
         
         $this -> load -> view('common/_layout', $this -> _DATA );
     }

@@ -2,15 +2,46 @@
 
 class Commune extends ANR_Controller {
 
-    protected $_css = array('home.css');
-    protected $_js = array('home.js');
+    protected $_css = array("commune.css");
+    protected $_js = array('commune.js');
+     
+    protected $page_title = "commune";
 
-    protected $page_title = "Gestion de commune";
-
-    protected $_folder = "Commune/";
-
+    protected $_folder = "commune/";
+    protected $_models = array('Commune_model');
+    
     public function index() {
+        $regions=$this->Commune_model->get_region();
+        $communes=$this->Commune_model->get_communes();
+        $this->loadData('regions',$regions);
+        $this->loadData('communes',$communes);
         $this -> loadPage('accueil');
+ 
     }
 
+    public function enregistrer_commune() {
+        if($_POST) {
+            extract($_POST);
+            $info_commune = array('IDRegion'=>$IDRegion,
+                                'NomCommune' => $NomCommune, 
+                                'NomMaire' => $NomMaire,
+                                'PrenomMaire' => $PrenomMaire,
+                                'ContactMaire' => $ContactMaire);
+
+            $res = $this -> Commune_model -> save($info_commune, $IDCommune ? $IDCommune : null );
+            echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
+        } else {
+            echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));
+        }
+    }
+
+     public function supprimer_commune($id_commune) {
+        $res = $this -> Commune_model -> delete($id_commune);
+        if($res) {
+            echo json_encode(array("status" => 1 ));
+        } else{
+            echo json_encode(array("status" => 0 ));
+        }
+    }
 }
+

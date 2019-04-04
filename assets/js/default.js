@@ -25,6 +25,12 @@ function form_validate(selector) {
                         input.parent().find('small.error').html('Numéro de téléphone incorrect').show()
                         formValide = false
                     }
+                } else if(input.attr('validation-type') == "cin") {
+                    if(!input.val().match(/^[1-9]\d{11}$/)) {
+                        input.addClass('hasError')
+                        input.parent().find('small.error').html('Numéro CIN incorrect').show()
+                        formValide = false
+                    }
                 }
             }
         } else if(input.attr('type') == "email") {

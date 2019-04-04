@@ -28,9 +28,9 @@ class Exportateur extends ANR_Controller {
                                 'FiscalExportateur' => $FiscalExportateur,
                                 'ContactExportateur' => $ContactExportateur,
                                 'AdresseExportateur' => $AdresseExportateur,
-                                'MandataireExportateur' => $MandataireExportateur,
-                            );
-            $res = $this -> Exportateur_Model -> save($info_exportateur, $IDExportateur ? $IDExportateur : null );
+                                'MandataireExportateur' => $MandataireExportateur);
+
+            $res = $this -> Exportateur_model -> save($info_exportateur, $IDExportateur ? $IDExportateur : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));

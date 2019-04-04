@@ -1,6 +1,6 @@
-<div class="modal" id="addComptoirModal1">
+<div class="modal" id="addComptoirCommModal">
   <div class="modal-dialog">
-    <form id = "form-add-comptoir1" action = "url">
+    <form id = "form-add-comptoircomm" action = "url">
       <div class="modal-content">
 
         <!-- Modal Header -->
@@ -14,27 +14,27 @@
         <div class="modal-body">
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomSocieteComptoirComm">Nom société</label>
-              <input type="text" class="form-control" id="NomSocieteComptoirComm" name = "NomSocieteComptoirComm" aria-describedby="NomHelp" placeholder="nom societe">
+              <input type="text" class="form-control" validation-type = "nom" id="NomSocieteComptoirComm" name = "NomSocieteComptoirComm" aria-describedby="NomHelp" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="MandataireComptoirComm">Mandataire</label>
-              <input type="text" class="form-control" id="MandataireComptoirComm" name = "MandataireComptoirComm" placeholder="mandataire">
+              <input type="text" class="form-control" validation-type = "mandataire" id="MandataireComptoirComm" name = "MandataireComptoirComm" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactComptoirComm">Contact</label>
-              <input type="text" class="form-control" id="ContactComptoirComm" name = "ContactComptoirComm" placeholder="contact">
+              <input type="text" class="form-control" validation-type = "contact" id="ContactComptoirComm" name = "ContactComptoirComm" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseSiegeSocialeComptoirComm">Adresse</label>
-              <input type="text" class="form-control" id="AdresseSiegeSocialeComptoirComm" name = "AdresseSiegeSocialeComptoirCommm" placeholder="adresse">
-          
+              <input type="text" class="form-control" validation-type = "adresse" id="AdresseSiegeSocialeComptoirComm" name = "AdresseSiegeSocialeComptoirComm" placeholder="" required>
+              </div>
           <div class="form-group form-inline">
-              <label class = "col-sm-6" for="NumInscriptionComptoirDeFonte">Numéro</label>
-              <input type="text" class="form-control" id="NumInscriptionComptoirComm" name ="NumInscriptionComptoirCommm" placeholder="numero">
+              <label class = "col-sm-6" for="NumInscriptionComptoirComm">Numéro</label>
+              <input type="text" class="form-control" validation-type = "num" id="NumInscriptionComptoirComm" name ="NumInscriptionComptoirComm" placeholder="" required>
           </div>
         <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateAgrementComptoirComm">Date agrement</label>
-              <input type="password" class="form-control" id="DateAgrementComptoirCommm" name = "DateAgrementComptoirCommm" placeholder="date">
+              <input type="Date" class="form-control" validation-type = "date" id="DateAgrementComptoirComm" name = "DateAgrementComptoirComm" placeholder="" required>
           </div>
         <!-- Modal footer -->
         <div class="modal-footer">

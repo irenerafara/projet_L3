@@ -24,6 +24,7 @@ $(document).ready(function() {
     })
 
     $('#button-add').on('click', function() {
+        $('#form-add-exportateur .modal-title').html('Ajouter exportateur')
         $('#form-add-exportateur input').val('')
     })
 
@@ -31,6 +32,7 @@ $(document).ready(function() {
 
 function edit_exportateur(id) {
     var tr = $('#exportateur-'+id)
+    $('#form-add-exportateur .modal-title').html('Editer exportateur')
     $('#IDExportateur').val(id)
     $('#NomSocieteExportateur').val(tr.find('td').eq(0).html())
     $('#NomExportateur').val(tr.find('td').eq(1).html())
@@ -41,7 +43,7 @@ function edit_exportateur(id) {
     $('#ContactExportateur').val(tr.find('td').eq(6).html())
     $('#AdresseExportateur').val(tr.find('td').eq(6).html())
     $('#MandataireExportateur').val(tr.find('td').eq(6).html())
-    $('#addUserModal').modal('show')
+    $('#addExportateurModal').modal('show')
 }
 
 function delete_exportateur(id) {

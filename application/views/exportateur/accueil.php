@@ -3,7 +3,7 @@
     <div class="card-header">
       <i class="fas fa-table"></i>
       Liste de l'exportateur
-      <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addModaExportateurl"><i class="fas fa-plus"></i> Ajouter</button>
+      <button class = "btn btn-primary float-right" id = "button-save-exportateur" data-toggle="modal" data-target="#addExportateurModal"><i class="fas fa-plus"></i> Ajouter</button>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -19,6 +19,7 @@
               <th>Contact</th>
               <th>Adresse</th>
               <th>Mandataire</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
