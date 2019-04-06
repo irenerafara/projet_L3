@@ -12,6 +12,16 @@ class User_Model extends ANR_Model{
         parent::__construct();
     }
 
+    public function get_where($search_criteria) {
+        $users = $this -> db -> where('NomUtilisateur like', "%$search_criteria%")
+                                -> or_where('PrenomUtilisateur like', "%$search_criteria%")
+                                -> or_where('AdresseUtilisateur like', "%$search_criteria%")
+                                -> or_where('ContactUtilisateur like', "%$search_criteria%")
+                                -> get($this -> _table)
+                                -> result_array();
+        return $users;
+    }
+
     public function validate(){
 
         // grab user input

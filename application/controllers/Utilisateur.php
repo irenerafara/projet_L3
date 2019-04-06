@@ -11,7 +11,13 @@ class Utilisateur extends ANR_Controller {
     protected $_models = array('User_model');
 
     public function index() {
-        $utilisateurs= $this->User_model->get();
+        if($_POST) extract($_POST);
+        if(isset($search)) {
+            $utilisateurs = $this->User_model->get_where($search);
+            $this -> loadData('search_criteria', $search);
+        } else {
+            $utilisateurs = $this->User_model->get();
+        }
         $this->loadData('utilisateurs',$utilisateurs);
         $this -> loadPage('accueil');
     }

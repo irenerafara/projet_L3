@@ -1,13 +1,13 @@
 
 <div id='comptoirfonte-form' class = "row">
 <div class = "col-md-12">
-    <h2>Liste de comptoir de fonte</h2>
+    <h2></h2>
 </div>
-<div id='login-form' class = "row">
+<div id='login-form' class = "col-md-12">
   <div class = "col-md-12">
     <div class="card-header">
       <i class="fas fa-table"></i>
-      Information comptoir de fonte
+      Liste du comptoirs de fonte
       <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addComptoirFonteModal"><i class="fas fa-plus"></i> Ajouter</button>
     </div>
     <div class="card-body">
@@ -31,6 +31,7 @@
               <tr id = "comptoirfonte-<?php echo $IDComptoirDeFonte; ?>">
                 <td><?php echo $NomSocieteComptoirDeFonte; ?></td>
                 <td><?php echo $MandataireComptoirDeFonte; ?></td>
+                <td><?php echo $ContactComptoirDeFonte; ?></td>
                 <td><?php echo $AdresseSiegeSocialeComptoirDeFonte; ?></td>
                 <td><?php echo $NumInscriptionComptoirDeFonte; ?></td>
                 <td><?php echo $DateAgrementComptoirDeFonte; ?></td>

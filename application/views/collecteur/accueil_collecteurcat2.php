@@ -1,7 +1,7 @@
 <div id='collecteurcat2-form' class = "row">
 <div class = "col-md-12">
     <h2>Liste de collecteur catégorie2</h2>
-</div><div id='collecteurcat2-form' class = "row">
+</div><div id='collecteurcat2-form' class = "col-md-12">
 <div id='login-form' class = "row">
   <div class = "col-md-12">
     <div class="card-header">

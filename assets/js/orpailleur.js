@@ -23,7 +23,7 @@ $(document).ready(function() {
         }
     })
 
-    $('#button-add').on('click', function() { 
+    $('#button-save-orpailleur').on('click', function() { 
          $('#form-add-orpailleur .modal-title').html('Ajouter orpailleur')
          $('#form-add-orpailleur input').val('')
     })
@@ -31,6 +31,7 @@ $(document).ready(function() {
 })
 
 function edit_orpailleur(id) {
+    console.log('#orpailleur')
     var tr = $('#orpailleur-'+id)
     $('#IDOrpailleur').val(id)
     $('#NomOrpailleur').val(tr.find('td').eq(0).html())

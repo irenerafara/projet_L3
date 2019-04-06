@@ -14,22 +14,22 @@
         <div class="modal-body">
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomUtilisateur">Nom utilisateur</label>
-              <input type="text" class="form-control" id="NomUtilisateur" name = "NomUtilisateur" aria-describedby="NomHelp" placeholder="nom" required>
+              <input type="text" class="form-control" id="NomUtilisateur" name = "NomUtilisateur" aria-describedby="NomHelp" placeholder="" required>
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrenomUtilisateur">Prenom Utilisateur</label>
-              <input type="text" class="form-control" id="PrenomUtilisateur" name = "PrenomUtilisateur" placeholder="prenom" required>
+              <input type="text" class="form-control" id="PrenomUtilisateur" name = "PrenomUtilisateur" placeholder="" required>
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseUtilisateur">Adresse Utilisateur</label>
-              <input type="text" class="form-control" id="AdresseUtilisateur" name = "AdresseUtilisateur" placeholder="adresse" required>
+              <input type="text" class="form-control" id="AdresseUtilisateur" name = "AdresseUtilisateur" placeholder="" required>
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactUtilisateur">Contact Utilisateur</label>
-              <input type="text" validation-type = "phone-number" class="form-control" id="ContactUtilisateur" name = "ContactUtilisateur" placeholder="contact" required>
+              <input type="text" validation-type = "phone-number" class="form-control" id="ContactUtilisateur" name = "ContactUtilisateur" placeholder="" required>
               <small class="form-text text-muted error"></small>
           </div>
         <div class="form-group form-inline">
@@ -43,10 +43,10 @@
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="EmailUtilisateur">Email Utilisateur</label>
-              <input type="email" class="form-control" id="EmailUtilisateur" name ="EmailUtilisateur" placeholder="email" required>
+              <input type="email" class="form-control" id="EmailUtilisateur" name ="EmailUtilisateur" placeholder="" required />
               <small class="form-text text-muted error"></small>
           </div>
-          <div class="form-group form-inline" id = "check-group">
+          <div class="form-group form-inline" id = "c+heck-group">
               <label class = "col-sm-6" for="reinit-password">Réinitialiser mot de passe</label>
               <input type="checkbox" class="form-control" id="reinit-password" >
           </div>
@@ -56,7 +56,7 @@
           </div>
         <div class="form-group form-inline" id = "password-group">
               <label class = "col-sm-6" for="MotDePasseUtilisateur">Mot de passe utilisateur</label>
-              <input type="password" class="form-control" id="MotDePasseUtilisateur" name = "MotDePasseUtilisateur" placeholder="Password">
+              <input type="password" class="form-control" id="MotDePasseUtilisateur" name = "MotDePasseUtilisateur" placeholder="">
               <small class="form-text text-muted error"></small>
           </div>
         <!-- Modal footer -->

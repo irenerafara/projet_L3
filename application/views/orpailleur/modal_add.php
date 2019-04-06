@@ -1,4 +1,4 @@
-<div class="modal" id="addOrpaillleurModal">
+<div class="modal" id="addOrpailleurModal">
   <div class="modal-dialog">
     <form id = "form-add-orpailleur" action = "url">
       <div class="modal-content">
@@ -14,35 +14,36 @@
         <div class="modal-body">
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomOrpailleur">Nom</label>
-              <input type="text" class="form-control" id="NomOrpailleur" name="NomOrpailleur" aria-describedby="NomHelp" placeholder="nom">
+              <input type="text" class="form-control" validation-type = "nom" id="NomOrpailleur" name="NomOrpailleur" aria-describedby="NomHelp" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrenomOrpailleur">Prenom</label>
-              <input type="text" class="form-control" id="PrenomOrpailleur" name = "PrenomOrpailleur" placeholder="prenom">
+              <input type="text" class="form-control" id="PrenomOrpailleur" name = "PrenomOrpailleur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="CINOrpailleur">CIN</label>
-              <input type="text" class="form-control" id="CINOrpailleur" name = "CINOrpailleur" placeholder="cin">
+              <input type="text" class="form-control" validation-type ="cin" id="CINOrpailleur" name = "CINOrpailleur" placeholder="" required/>
+              <small class = "form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="LieuCINOrpailleur">LieuCIN</label>
-              <input type="text" class="form-control" id="LieuCINOrpailleur" name="LieuCINOrpailleur" placeholder="lieu">
+              <input type="text" class="form-control" id="LieuCINOrpailleur" name="LieuCINOrpailleur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateCINOrpailleur">Date CIN</label>
-              <input type="date" class="form-control" id="DateCINOrpailleur" name="DateCINOrpailleur" placeholder="date cin">
+              <input type="date" class="form-control" id="DateCINOrpailleur" name="DateCINOrpailleur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DuplicataCINOrpailleur">Date duplicata</label>
-              <input type="date" class="form-control" id="DuplicataCINOrpailleur" name="DuplicataCINOrpailleur" placeholder="date">
+              <input type="date" class="form-control" id="DuplicataCINOrpailleur" name="DuplicataCINOrpailleur" placeholder=""required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactOrpailleur">Contact</label>
-              <input type="text" class="form-control" id="ContactOrpailleur" name="ContactOrpailleur" placeholder="contact">
+              <input type="text" class="form-control" validation-type = "phone-number" id="ContactOrpailleur" name="ContactOrpailleur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseOrpailleur">Adresse</label>
-              <input type="text" class="form-control" id="AdresseOrpailleur" name="AdresseOrpailleur" placeholder="adresse">
+              <input type="text" class="form-control" id="AdresseOrpailleur" name="AdresseOrpailleur" placeholder="" required>
               </div>
           
         

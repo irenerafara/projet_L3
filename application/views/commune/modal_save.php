@@ -14,7 +14,7 @@
         <div class="modal-body">
           <div class="form-group form-inline">
             <label class = "col-sm-6" for="IDRegion">Région</label>
-            <select class="form-control" id="IDRegion" name="IDRegion">
+            <select class="form-control" validation-type = "region" id="IDRegion" name="IDRegion" required>
               <?php foreach($regions as $region){
               extract($region); ?>
               <option  value = "<?php echo $IDRegion; ?>">
@@ -26,20 +26,20 @@
          
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomCommune">Nom commune</label>
-              <input type="text" class="form-control" id="NomCommune" name="NomCommune" aria-describedby="NomHelp" placeholder="">
+              <input type="text" class="form-control"validation-type = "nomcom" id="NomCommune" name="NomCommune" aria-describedby="NomHelp" placeholder=""required>
           </div>
          
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomMaire">Nom maire</label>
-              <input type="text" class="form-control" id="NomMaire" name = "NomMaire" placeholder="">
+              <input type="text" class="form-control" validation-type = "nom" id="NomMaire" name = "NomMaire" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrenomMaire">Prenom Maire</label>
-              <input type="text" class="form-control" id="PrenomMaire" name = "PrenomMaire" placeholder="">
+              <input type="text" class="form-control" validation-type = "prenom" id="PrenomMaire" name = "PrenomMaire" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactMaire">Contact Maire</label>
-              <input type="text" class="form-control" id="ContactMaire" name = "ContactMaire" placeholder="">
+              <input type="text" class="form-control" validation-type = "contact" id="ContactMaire" name = "ContactMaire" placeholder="" required>
               
           </div>
            <!-- Modal footer -->

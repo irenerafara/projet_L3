@@ -20,6 +20,7 @@ class Collecteur extends ANR_Controller {
         $collecteurcat2s= $this->Collecteur_model->get_collecteur_cat2();
         $this->loadData('collecteurcat2s',$collecteurcat2s);
         $this -> loadPage('accueil_collecteurcat2');
+        
     }    
    
 

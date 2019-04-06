@@ -21,8 +21,9 @@
               <input type="text" class="form-control" validation-type = "prenom" id="PrenomCollecteurCat2" name = "PrenomCollecteurCat2" placeholder="" required>
           </div>
           <div class="form-group form-inline">
-              <label class = "col-sm-6" for="CINCollecteurCat1">CIN</label>
+              <label class = "col-sm-6" for="CINCollecteurCat2">CIN</label>
               <input type="text" class="form-control" validation-type = "cin" id="CINCollecteurCat2" name = "CINCollecteurCat2" placeholder="" required>
+              <small class = "form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="LieuCINCollecteurCat2">Lieu CIN</label>
@@ -40,6 +41,7 @@
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactCollecteurCat2">Contact</label>
               <input type="text" class="form-control" validation-type = "contact" id="ContactCollecteurCat2" name="ContactCollecteurCat2" placeholder=""required>
+              <small class = "form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseCollecteurCat2">Adresse</label>

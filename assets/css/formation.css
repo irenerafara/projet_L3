@@ -1,3 +1,9 @@
-.btn-edit {
+.btn-action, .btn-edit {
     margin-right: 10px;
+}
+#details-container {
+    display: none;
+}
+#back-formation {
+    margin-left: 10px;
 }

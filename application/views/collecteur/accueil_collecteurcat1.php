@@ -1,9 +1,9 @@
-<div id='collecteurcat1-form' class = "row">
+<div id='collecteurcat1-content' class = "row">
 <div class = "col-md-12">
     <h2>Liste de collecteur catégorie1</h2>
 </div>
 
-<div id='login-form' class = "row">
+<div id='collecteurcat1-container' class = "col-md-12">
   <div class = "col-md-12">
     <div class="card-header">
       <i class="fas fa-table"></i>

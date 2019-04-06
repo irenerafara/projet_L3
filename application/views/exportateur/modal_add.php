@@ -14,40 +14,40 @@
         <div class="modal-body">
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomSocieteExportateur">Nom société</label>
-              <input type="text" class="form-control" id="NomSocieteExportateur" name="NomSocieteExportateur" aria-describedby="NomHelp" placeholder="Nom du société">
+              <input type="text" class="form-control" id="NomSocieteExportateur" name="NomSocieteExportateur" aria-describedby="NomHelp" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomExportateur">Nom exportateur</label>
-              <input type="text" class="form-control" id="NomExportateur" name = "NomExportateur" placeholder="Nom">
+              <input type="text" class="form-control" validation-type = "nom" id="NomExportateur" name = "NomExportateur" placeholder="Nom">
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrenomExportateur">Prenom</label>
-              <input type="text" class="form-control" id="PrenomExportateur" name = "PrenomExportateur" placeholder="Prenom">
+              <input type="text" class="form-control" validation-type = "prenom" id="PrenomExportateur" name = "PrenomExportateur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="StatExportateur">Stat</label>
-              <input type="text" class="form-control" id="StatExportateur" name="StatExportateur" placeholder="Numero">
+              <input type="text" class="form-control" validation-type = "stat" id="StatExportateur" name="StatExportateur" placeholder="" required>
           </div>
           
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NifExportateur">Nif</label>
-              <input type="text" class="form-control" id="NifExportateur" name="NifExportateur" placeholder="Nif">
+              <input type="text" class="form-control" validation-type = "nif" id="NifExportateur" name="NifExportateur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="FiscalExportateur">Fiscal</label>
-              <input type="text" class="form-control" id="FiscalExportateur" name="FiscalExportateur" placeholder="Fiscal">
+              <input type="text" class="form-control"validation-type = "fiscal" id="FiscalExportateur" name="FiscalExportateur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactExportateur">Contact</label>
-              <input type="text" class="form-control" id="ContactExportateur" name="ContactExportateur" placeholder="Contact">
+              <input type="text" class="form-control"validation-type = "contact" id="ContactExportateur" name="ContactExportateur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseExportateur">Adresse</label>
-              <input type="text" class="form-control" id="AdresseExportateur" name="AdresseExportateur" placeholder="Adresse">
+              <input type="text" class="form-control" validation-type = "adresse" id="AdresseExportateur" name="AdresseExportateur" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="MandataireExportateur">Mandataire</label>
-              <input type="text" class="form-control" id="MandataireExportateur" name="MandataireExportateur" placeholder="Mandataire">
+              <input type="text" class="form-control" validation-type = "mandataire" id="MandataireExportateur" name="MandataireExportateur" placeholder="" required>
           </div>
            <!-- Modal footer -->
         <div class="modal-footer">

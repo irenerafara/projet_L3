@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $(function() {  
+        $('#TypeExportateur').trigger('change'); 
+    })
+
     $('#form-save-exportation').on('submit', function(e) {
         e.preventDefault();
         if(form_validate('#form-save-exportation')){
@@ -28,18 +32,45 @@ $(document).ready(function() {
         $('#form-save-exportation input').val('')
     })
 
+    $('#TypeExportateur').on('change', function() {
+        var idType = $(this).val()
+        $.ajax({
+            url: base_url(true)+"exportation/load_exportateur/"+idType, 
+            success: function(data) {
+                $('#IDExportateur').html(data)
+            },
+            error: function() {
+                alert('Impossible de charger les '+$('#TypeExportateur option[value='+idType+']').html())
+            }
+        })
+    })
+    $('#PrixUnitaireExportation, #QuantiteExportation').on('keyup',function(){
+         var quantite = $('#QuantiteExportation').val()
+         var prixUnitaire = $('#PrixUnitaireExportation').val()
+         if (quantite != "" && prixUnitaire != "") {
+             quantite = parseFloat(quantite)
+             prixUnitaire = parseFloat(prixUnitaire)
+             $('#PrixTotaleExportation').val(quantite*prixUnitaire*1000)
+
+         }
+    })
+    $('.btn-edit').on('click', function() {
+        var tr = $(this).parent().parent().parent()
+        var info = tr.attr('id').split('-')
+        $('#form-save-exportation .modal-title').html('Editer exportation')
+        $('#IDExportation').val(info[1])
+        $('#TypeExportateur').val(info[2]).trigger('change')
+        $('#IDExportateur').val(info[3])
+        $('#AnneeExportation').val($.trim(tr.find('td').eq(2).html()))
+        $('#QuantiteExportation').val(tr.find('td').eq(4).html())
+        $('#PrixUnitaireExportation').val(tr.find('td').eq(5).html())
+        $('#PrixTotaleExportation').val(tr.find('td').eq(6).html())
+        $('#addExportationModal').modal('show')
+    })
+
 })
 
-function edit_exportation(id) {
-    var tr = $('#exportation-'+id)
-    $('#form-save-exportation .modal-title').html('Editer exportation')
-    $('#IDExportation').val(id)
-    $('#AnneeExportation').val($.trim(tr.find('td').eq(0).html()))
-    $('#QuantiteExportation').val(tr.find('td').eq(1).html())
-    $('#PrixUnitaireExportation').val(tr.find('td').eq(2).html())
-    $('#PrixTotaleExportation').val(tr.find('td').eq(3).html())
-    $('#addExportationModal').modal('show')
-}
+
 
 function delete_exportation(id) {
     if(confirm('Voulez-vous supprimer cette exportation ?')) {

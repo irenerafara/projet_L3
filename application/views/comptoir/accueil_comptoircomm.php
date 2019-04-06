@@ -1,8 +1,8 @@
-<div id='comptoircomm-form' class = "row">
+<div id='comptoircomm-form' class = "col-md-12">
 <div class = "col-md-12">
     <h2>Liste de comptoir commerciale</h2>
 </div>
-<div id='login-form' class = "row">
+<div id='login-form' class = "col-md-12">
   <div class = "col-md-12">
     <div class="card-header">
       <i class="fas fa-table"></i>

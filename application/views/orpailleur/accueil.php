@@ -4,7 +4,7 @@
     <div class="card-header">
       <i class="fas fa-table"></i>
       Information orpailleur
-      <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addOrpaillleurModal"><i class="fas fa-plus"></i> Ajouter</button>
+      <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addOrpailleurModal"><i class="fas fa-plus"></i> Ajouter</button>
     </div>
     <div class="card-body">
       <div class="table-responsive">

@@ -11,9 +11,6 @@ class Orpailleur_Model extends ANR_Model{
     function __construct(){
         parent::__construct();
     }
-    public function delete_orpailleur($id) {
-        return $this -> db -> where('IDOrpailleur', $id) -> delete('Orpailleur');
-    }
     public function save_orpailleur($data_to_save, $id = null){ 
         if($id) {
             return $this -> db -> where('IDOrpailleur', $id) -> update('orpailleur', $data_to_save);
@@ -21,5 +18,9 @@ class Orpailleur_Model extends ANR_Model{
             return $this -> db -> insert('orpailleur', $data_to_save);
         }
     } 
+    public function delete_orpailleur($id) {
+        return $this -> db -> where('IDOrpailleur', $id) -> delete('orpailleur');
+    }
+   
 }
 ?>

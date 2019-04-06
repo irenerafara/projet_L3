@@ -14,7 +14,7 @@
         <div class="modal-body">
           <div class="form-group form-inline">
             <label class = "col-sm-6" for="IDCommune">commune</label>
-            <select class="form-control" id="IDCommune" name = "IDCommune">
+            <select class="form-control" validation-type = "commune" id="IDCommune" name = "IDCommune" required>
             <?php foreach($communes as $commune){
               extract($commune); ?>
               <option  value = "<?php echo $IDCommune; ?>">
@@ -25,19 +25,19 @@
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateDebutFormation">Date Début</label>
-              <input type="date" class="form-control" id="DateDebutFormation" name="DateDebutFormation" aria-describedby="NomHelp" placeholder="">
+              <input type="date" class="form-control"validation-type = "datedebut" id="DateDebutFormation" name="DateDebutFormation" aria-describedby="NomHelp" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateFinFormation">Date Fin</label>
-              <input type="date" class="form-control" id="DateFinFormation" name ="DateFinFormation" placeholder="">
+              <input type="date" class="form-control" validation-type = "datefin" id="DateFinFormation" name ="DateFinFormation" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="MotifMissionFormation">Motif</label>
-              <input type="text" class="form-control" id="MotifMissionFormation" name ="MotifMissionFormation" placeholder="">
+              <input type="text" class="form-control" validation-type = "motif" id="MotifMissionFormation" name ="MotifMissionFormation" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DetailFormation">Détail</label>
-              <input type="text" class="form-control" id="DetailFormation" name="DetailFormation" placeholder="">
+              <input type="text" class="form-control" validation-type = "detail" id="DetailFormation" name="DetailFormation" placeholder="" required>
           </div>
         
            <!-- Modal footer -->

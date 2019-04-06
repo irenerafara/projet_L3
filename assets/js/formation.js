@@ -28,6 +28,26 @@ $(document).ready(function() {
         $('#form-save-formation input').val('')
     })
 
+    $('.edit-details-formation').on('click', function() {
+        var idformation = $(this).attr('id').split('-')[1]
+        $('#list-container').hide()
+        $.ajax({
+            url: base_url(true)+'formation/load_detailsformation/'+idformation,
+            success: function(data) {
+                $('#details-container').show()
+                $('#details-content').html(data)
+            },
+            error: function(err) {
+                alert('Echec du chargement de la page')
+            }
+        })
+    })
+
+    $('#back-formation').on('click', function() {
+        $('#details-container').hide()
+        $('#list-container').show()
+    })
+
 })
 
 function edit_formation(id) {

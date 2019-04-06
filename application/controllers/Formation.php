@@ -5,17 +5,14 @@ class Formation extends ANR_Controller {
     protected $_css = array("formation.css");
     protected $_js = array('formation.js');
 
-
-  
     protected $page_title = "formation";
-
 
     protected $_folder = "formation/";
     protected $_models = array('Formation_model');
 
     public function index() {
-        $communes= $this->Formation_model->get_communes();
-        $formations= $this->Formation_model->get_formations();
+        $communes = $this->Formation_model->get_communes();
+        $formations = $this->Formation_model->get_formations();
         $this->loadData('formations',$formations);
         $this->loadData('communes',$communes);
         $this -> loadPage('accueil');
@@ -45,5 +42,9 @@ class Formation extends ANR_Controller {
         else{
             echo json_encode(array("status" => 0 ));
         }
+    }
+
+    public function load_detailsformation($id_formation) {
+        $this -> loadPageAjax('details');
     }
 }
