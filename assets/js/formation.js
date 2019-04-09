@@ -134,7 +134,7 @@ $(document).ready(function() {
             $.ajax({
                 url: base_url(true)+'formation/update_formation',
                 type: "POST",
-                data: {iduser: iduser, idformation: idformation, type: "add", infos: typeAssistant == 1 ? "Assister_CollecteurCat1" : "Assister_Orpailleur"},
+                data: {iduser: iduser, idformation: idformation, type: "add", infos: typeAssistant == 1 ? "assister_collecteurcat1" : "assister_orpailleur"},
                 dataType: "JSON",
                 success: function(data) {
                     if(data.status == 1) {
@@ -163,7 +163,7 @@ $(document).on('click', '.remove-assistant', function() {
     $.ajax({
         url: base_url(true)+'formation/update_formation',
         type: "POST",
-        data: {iduser: iduser, idformation: idformation, type: "delete", infos: typeAssistant == 1 ? "Assister_CollecteurCat1" : "Assister_Orpailleur"},
+        data: {iduser: iduser, idformation: idformation, type: "delete", infos: typeAssistant == 1 ? "assister_collecteurcat1" : "assister_orpailleur"},
         dataType: "JSON",
         success: function(data) {
             if(data.status == 1) {

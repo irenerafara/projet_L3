@@ -11,7 +11,7 @@ class Orpailleur extends ANR_Controller {
     protected $_models = array('Orpailleur_Model');
 
     public function index() {
-        $orpailleurs= $this->Orpailleur_model->get();
+        $orpailleurs= $this -> Orpailleur_Model -> get();
         $this->loadData('orpailleurs',$orpailleurs);
         $this -> loadPage('accueil');
     }
