@@ -14,27 +14,28 @@
         <div class="modal-body">
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomSocieteComptoirDeFonte">Nom société</label>
-              <input type="text" class="form-control" validation-type = "nom" id="NomSocieteComptoirDeFonte" name = "NomSocieteComptoirDeFonte" aria-describedby="NomHelp" placeholder="" required/>
+              <input type="text" class="form-control" id="NomSocieteComptoirDeFonte" name = "NomSocieteComptoirDeFonte" aria-describedby="NomHelp" placeholder="" required/>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="MandataireComptoirDeFonte">Mandataire</label>
-              <input type="text" class="form-control" validation-type = "mandataire" id="MandataireComptoirDeFonte" name = "MandataireComptoirDeFonte" placeholder="" required/>
+              <input type="text" class="form-control" id="MandataireComptoirDeFonte" name = "MandataireComptoirDeFonte" placeholder="" required/>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactComptoirDeFonte">Contact</label>
-              <input type="text" class="form-control" validation-type = "contact" id="ContactComptoirDeFonte" name = "ContactComptoirDeFonte" placeholder="" required/>
+              <input type="text" class="form-control" validation-type = "phone-number" id="ContactComptoirDeFonte" name = "ContactComptoirDeFonte" placeholder="" required/>
+              <small class = "form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseSiegeSocialeComptoirDeFonte">Adresse</label>
-              <input type="text" class="form-control" validation-type = "adresse" id="AdresseSiegeSocialeComptoirDeFonte" name = "AdresseSiegeSocialeComptoirDeFonte" placeholder="" required/>
+              <input type="text" class="form-control" id="AdresseSiegeSocialeComptoirDeFonte" name = "AdresseSiegeSocialeComptoirDeFonte" placeholder="" required/>
               </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NumInscriptionComptoirDeFonte">Numéro</label>
-              <input type="text" class="form-control" validation-type = "num" id="NumInscriptionComptoirDeFonte" name ="NumInscriptionComptoirDeFonte" placeholder="" required/>
+              <input type="text" class="form-control" id="NumInscriptionComptoirDeFonte" name ="NumInscriptionComptoirDeFonte" placeholder="" required/>
           </div>
         <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateAgrementComptoirDeFonte">Date agrement</label>
-              <input type="Date" class="form-control" validation-type = "date" id="DateAgrementComptoirDeFonte" name = "DateAgrementComptoirDeFonte" placeholder="" required/>
+              <input type="Date" class="form-control" id="DateAgrementComptoirDeFonte" name = "DateAgrementComptoirDeFonte" placeholder="" required/>
           </div>
         <!-- Modal footer -->
         <div class="modal-footer">

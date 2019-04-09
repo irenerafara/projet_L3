@@ -52,7 +52,8 @@
   </div>
   <div id = "details-container" class = "col-md-12">
     <div id = "details-head">
-      <button class = "btn btn-default btn-action" id = "back-formation" title = "Retour à la liste des formations"><i class="fas fa-arrow-left"></i></button> 
+      <button class = "btn btn-default btn-action float-left" id = "back-formation" title = "Retour à la liste des formations"><i class="fas fa-arrow-left"></i></button> 
+      <h3 id = "title-formation"></h3>
     </div>
     <div id = "details-content">
 

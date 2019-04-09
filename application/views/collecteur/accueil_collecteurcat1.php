@@ -1,13 +1,13 @@
 <div id='collecteurcat1-content' class = "row">
 <div class = "col-md-12">
-    <h2>Liste de collecteur catégorie1</h2>
+    <h2></h2>
 </div>
 
 <div id='collecteurcat1-container' class = "col-md-12">
   <div class = "col-md-12">
     <div class="card-header">
       <i class="fas fa-table"></i>
-      Information collecteur catégorie1
+      Liste de collecteur catégorie1
       <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addCollecteurCat1Modal"><i class="fas fa-plus"></i> Ajouter</button>
     </div>
     <div class="card-body">

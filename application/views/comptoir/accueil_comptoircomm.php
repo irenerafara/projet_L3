@@ -1,12 +1,12 @@
 <div id='comptoircomm-form' class = "col-md-12">
 <div class = "col-md-12">
-    <h2>Liste de comptoir commerciale</h2>
+    <h2></h2>
 </div>
 <div id='login-form' class = "col-md-12">
   <div class = "col-md-12">
     <div class="card-header">
       <i class="fas fa-table"></i>
-      Information comptoir commerciale
+      Liste de comptoir commerciale
       <button class = "btn btn-primary float-right" id = "button-add" data-toggle="modal" data-target="#addComptoirCommModal"><i class="fas fa-plus"></i> Ajouter</button>
     </div>
     <div class="card-body">

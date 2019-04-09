@@ -35,10 +35,10 @@ class Collecteur_Model extends ANR_Model{
         }
     }
     public function delete_collecteurcat2($id) {
-        return $this -> db -> where('IDCollecteurcat2', $id) -> delete('collecteur_cat2');
+        return $this -> db -> where('IDCollecteurCat2', $id) -> delete('collecteur_cat2');
     }
     public function delete_collecteurcat1($id) {
-        return $this -> db -> where('IDCollecteurcat1', $id) -> delete('collecteur_cat1');
+        return $this -> db -> where('IDCollecteurCat1', $id) -> delete('collecteur_cat1');
     }
     
 }

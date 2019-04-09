@@ -14,11 +14,11 @@
         <div class="modal-body">
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomCollecteurCat2">Nom</label>
-              <input type="text" class="form-control" validation-type = "nom" id="NomCollecteurCat2" name="NomCollecteurCat2" aria-describedby="NomHelp" placeholder=""required>
+              <input type="text" class="form-control" id="NomCollecteurCat2" name="NomCollecteurCat2" aria-describedby="NomHelp" placeholder=""required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrenomCollecteurCat2">Prénom</label>
-              <input type="text" class="form-control" validation-type = "prenom" id="PrenomCollecteurCat2" name = "PrenomCollecteurCat2" placeholder="" required>
+              <input type="text" class="form-control" id="PrenomCollecteurCat2" name = "PrenomCollecteurCat2" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="CINCollecteurCat2">CIN</label>
@@ -27,25 +27,25 @@
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="LieuCINCollecteurCat2">Lieu CIN</label>
-              <input type="text" class="form-control" validation-type = "lieu" id="LieuCINCollecteurCat2" name="LieuCINCollecteurCat2" placeholder="" required>
+              <input type="text" class="form-control" id="LieuCINCollecteurCat2" name="LieuCINCollecteurCat2" placeholder="" required>
           </div>
           
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateCINCollecteurCat2">Date CIN</label>
-              <input type="date" class="form-control" validation-type = "date" id="DateCINCollecteurCat2" name="DateCINCollecteurCat2" placeholder=""required>
+              <input type="date" class="form-control" id="DateCINCollecteurCat2" name="DateCINCollecteurCat2" placeholder=""required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DuplicataCINCollecteurCat2">Duplicata</label>
-              <input type="date" class="form-control"validation-type = "duplicata" id="DuplicataCINCollecteurCat2" name="DuplicataCINCollecteurCat2" placeholder="" required>
+              <input type="date" class="form-control" id="DuplicataCINCollecteurCat2" name="DuplicataCINCollecteurCat2" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactCollecteurCat2">Contact</label>
-              <input type="text" class="form-control" validation-type = "contact" id="ContactCollecteurCat2" name="ContactCollecteurCat2" placeholder=""required>
+              <input type="text" class="form-control" validation-type = "phone-number" id="ContactCollecteurCat2" name="ContactCollecteurCat2" placeholder=""required>
               <small class = "form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseCollecteurCat2">Adresse</label>
-              <input type="text" class="form-control" validation-type = "adresse"id="AdresseCollecteurCat2" name="AdresseCollecteurCat2" placeholder="" required>
+              <input type="text" class="form-control" id="AdresseCollecteurCat2" name="AdresseCollecteurCat2" placeholder="" required>
           </div>
           
            <!-- Modal footer -->

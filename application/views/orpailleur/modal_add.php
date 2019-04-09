@@ -14,11 +14,11 @@
         <div class="modal-body">
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="NomOrpailleur">Nom</label>
-              <input type="text" class="form-control" validation-type = "nom" id="NomOrpailleur" name="NomOrpailleur" aria-describedby="NomHelp" placeholder="" required>
+              <input type="text" class="form-control" id="NomOrpailleur" name="NomOrpailleur" aria-describedby="NomHelp" placeholder="" required/>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrenomOrpailleur">Prenom</label>
-              <input type="text" class="form-control" id="PrenomOrpailleur" name = "PrenomOrpailleur" placeholder="" required>
+              <input type="text" class="form-control" id="PrenomOrpailleur" name = "PrenomOrpailleur" placeholder="" required/>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="CINOrpailleur">CIN</label>
@@ -27,19 +27,20 @@
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="LieuCINOrpailleur">LieuCIN</label>
-              <input type="text" class="form-control" id="LieuCINOrpailleur" name="LieuCINOrpailleur" placeholder="" required>
+              <input type="text" class="form-control" id="LieuCINOrpailleur" name="LieuCINOrpailleur" placeholder="" required/>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateCINOrpailleur">Date CIN</label>
-              <input type="date" class="form-control" id="DateCINOrpailleur" name="DateCINOrpailleur" placeholder="" required>
+              <input type="date" class="form-control" id="DateCINOrpailleur" name="DateCINOrpailleur" placeholder="" required/>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DuplicataCINOrpailleur">Date duplicata</label>
-              <input type="date" class="form-control" id="DuplicataCINOrpailleur" name="DuplicataCINOrpailleur" placeholder=""required>
+              <input type="date" class="form-control" id="DuplicataCINOrpailleur" name="DuplicataCINOrpailleur" placeholder=""required/>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="ContactOrpailleur">Contact</label>
-              <input type="text" class="form-control" validation-type = "phone-number" id="ContactOrpailleur" name="ContactOrpailleur" placeholder="" required>
+              <input type="text" class="form-control" validation-type = "phone-number" id="ContactOrpailleur" name="ContactOrpailleur" placeholder="" required/>
+              <small class = "form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="AdresseOrpailleur">Adresse</label>

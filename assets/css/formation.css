@@ -7,3 +7,12 @@
 #back-formation {
     margin-left: 10px;
 }
+#affectation-formateur {
+    margin-top: 160px;
+}
+#affectation-assistant {
+    margin-top: 160px;
+}
+.fa-user-times {
+    cursor: pointer;
+}

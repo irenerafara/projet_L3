@@ -54,4 +54,14 @@
         <i class="fas fa-air-freshener"></i>
           <span>Commune</span></a>
      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('index.php/carte') ?>">
+        <i class="fas fa-align-justify"></i>
+          <span>Carte</span></a>
+     </li>
+     <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('index.php/entree_sortie') ?>">
+        <i class="fas fa-arrows-alt"></i>
+          <span>Entrée_Sortie</span></a>
+     </li>
     </ul>

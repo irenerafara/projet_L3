@@ -12,8 +12,18 @@ class Carte extends ANR_Controller {
 
     public function index() {
         $communes= $this->Carte_model->get_commune();
+        $collecteurcat1s= $this->Carte_model->get_collecteurcat1();
+        $collecteurcat2s= $this->Carte_model->get_collecteurcat2();
+        $comptoirfontes= $this->Carte_model->get_comptoirfonte();
+        $comptoircommerciales= $this->Carte_model->get_comptoircommerciale();
+        $orpailleurs= $this->Carte_model->get_orpailleur();
         $cartes= $this->Carte_model->get_cartes();
         $this->loadData('communes',$communes);
+        $this->loadData('collecteurcat1s',$collecteurcat1s);
+        $this->loadData('collecteurcat2s',$collecteurcat2s);
+        $this->loadData('comptoirfontes',$comptoirfontes);
+        $this->loadData('comptoircommerciales',$comptoircommerciales);
+        $this->loadData('orpailleurs',$orpailleurs);
         $this->loadData('cartes',$cartes);
         $this -> loadPage('accueil');
     }
@@ -22,6 +32,11 @@ class Carte extends ANR_Controller {
         if($_POST) {
             extract($_POST);
             $info_carte = array('IDCommune' => $IDCommune,
+                                'IDCollecteurCat1'=> $IDCollecteurCat1,
+                                'IDCollecteurCat2' => $IDCollecteurCat2,
+                                'IDComptoirDeFonte'=> $IDComptoirDeFonte,
+                                'IDComptoirCommerciale'=> $IDComptoirCommerciale,
+                                'IDOrpailleur'=> $IDOrpailleur,
                                 'NumCarte' => $NumCarte,
                                 'DateDemandeCarte' => $DateDemandeCarte,
                                 'DateObtentionCarte' => $DateObtentionCarte,
