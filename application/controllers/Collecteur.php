@@ -8,16 +8,16 @@ class Collecteur extends ANR_Controller {
     protected $page_title = "Gestion de collecteur";
 
     protected $_folder = "collecteur/";
-    protected $_models = array('Collecteur_model');
+    protected $_models = array('Collecteur_Model');
     
     public function collecteur_cat1() { 
-        $collecteurcat1s= $this->Collecteur_model-> get_collecteur_cat1();
+        $collecteurcat1s= $this->Collecteur_Model ->get_collecteur_cat1();
         $this->loadData('collecteurcat1s',$collecteurcat1s);
         $this -> loadPage('accueil_collecteurcat1');
      
     }
     public function collecteur_cat2() {
-        $collecteurcat2s= $this->Collecteur_model->get_collecteur_cat2();
+        $collecteurcat2s= $this->Collecteur_Model->get_collecteur_cat2();
         $this->loadData('collecteurcat2s',$collecteurcat2s);
         $this -> loadPage('accueil_collecteurcat2');
         
@@ -42,7 +42,7 @@ class Collecteur extends ANR_Controller {
                                 'AdresseCollecteurCat1' => $AdresseCollecteurCat1);
                                 
 
-            $res = $this -> Collecteur_model -> save_collecteurcat1($info_collecteurcat1, $IDCollecteurCat1 ? $IDCollecteurCat1 : null );
+            $res = $this -> Collecteur_Model ->save_collecteurcat1($info_collecteurcat1, $IDCollecteurCat1 ? $IDCollecteurCat1 : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));
@@ -50,7 +50,7 @@ class Collecteur extends ANR_Controller {
     }
 
     public function supprimer_collecteur_cat1($id_collecteurcat1) {
-        $res = $this -> Collecteur_model -> delete_collecteurcat1($id_collecteurcat1);
+        $res = $this -> Collecteur_Model ->delete_collecteurcat1($id_collecteurcat1);
         if($res)
         {
             echo json_encode(array("status" => 1 ));
@@ -74,7 +74,7 @@ class Collecteur extends ANR_Controller {
                                 'AdresseCollecteurCat2' => $AdresseCollecteurCat2);
                                 
 
-            $res = $this -> Collecteur_model -> save_collecteurcat2($info_collecteurcat2, $IDCollecteurCat2 ? $IDCollecteurCat2 : null );
+            $res = $this -> Collecteur_Model ->save_collecteurcat2($info_collecteurcat2, $IDCollecteurCat2 ? $IDCollecteurCat2 : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));
@@ -82,7 +82,7 @@ class Collecteur extends ANR_Controller {
     }
 
     public function supprimer_collecteur_cat2($id_collecteurcat2) {
-        $res = $this -> Collecteur_model -> delete_collecteurcat2($id_collecteurcat2);
+        $res = $this -> Collecteur_Model ->delete_collecteurcat2($id_collecteurcat2);
         if($res)
         {
             echo json_encode(array("status" => 1 ));

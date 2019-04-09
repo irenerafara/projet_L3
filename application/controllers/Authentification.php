@@ -20,8 +20,8 @@
             }
             if($_POST) {
                 if($this -> input -> post('username') && $this -> input -> post('password')) {
-                    $this -> load -> model('user_model');
-                    $result = $this -> user_model -> validate();
+                    $this -> load -> model('user_Model');
+                    $result = $this -> user_Model ->validate();
                     if($result) {
                         redirect("home");
                     } else {

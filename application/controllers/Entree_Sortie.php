@@ -9,3 +9,5 @@ class Entree_Sortie extends ANR_Controller {
 
     protected $_folder = "entree_sortie/";
     protected $_models = array('Entree_sortie_Model');
+
+}

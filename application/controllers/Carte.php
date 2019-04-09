@@ -8,16 +8,16 @@ class Carte extends ANR_Controller {
     protected $page_title = "information carte";
 
     protected $_folder = "carte/";
-    protected $_models = array('Carte_model');
+    protected $_models = array('Carte_Model');
 
     public function index() {
-        $communes= $this->Carte_model->get_commune();
-        $collecteurcat1s= $this->Carte_model->get_collecteurcat1();
-        $collecteurcat2s= $this->Carte_model->get_collecteurcat2();
-        $comptoirfontes= $this->Carte_model->get_comptoirfonte();
-        $comptoircommerciales= $this->Carte_model->get_comptoircommerciale();
-        $orpailleurs= $this->Carte_model->get_orpailleur();
-        $cartes= $this->Carte_model->get_cartes();
+        $communes= $this -> Carte_Model -> get_commune();
+        $collecteurcat1s= $this -> Carte_Model -> get_collecteurcat1();
+        $collecteurcat2s= $this -> Carte_Model -> get_collecteurcat2();
+        $comptoirfontes= $this -> Carte_Model -> get_comptoirfonte();
+        $comptoircommerciales= $this -> Carte_Model -> get_comptoircommerciale();
+        $orpailleurs= $this -> Carte_Model -> get_orpailleur();
+        $cartes= $this -> Carte_Model -> get_cartes();
         $this->loadData('communes',$communes);
         $this->loadData('collecteurcat1s',$collecteurcat1s);
         $this->loadData('collecteurcat2s',$collecteurcat2s);
@@ -52,7 +52,7 @@ class Carte extends ANR_Controller {
     }
 
     public function supprimer_carte($id_carte) {
-        $res = $this -> Carte_model -> delete($id_carte);
+        $res = $this -> Carte_Model ->delete($id_carte);
         if($res)
         {
             echo json_encode(array("status" => 1 ));

@@ -8,10 +8,10 @@ class Exportateur extends ANR_Controller {
     protected $page_title = "Gestion de l'exportateur";
 
     protected $_folder = "exportateur/";
-    protected $_models = array('Exportateur_model');
+    protected $_models = array('Exportateur_Model');
 
     public function index() {
-        $exportateurs= $this->Exportateur_model->get();
+        $exportateurs= $this->Exportateur_Model->get();
         $this->loadData('exportateurs',$exportateurs);
         $this -> loadPage('accueil');
     }
@@ -30,7 +30,7 @@ class Exportateur extends ANR_Controller {
                                 'AdresseExportateur' => $AdresseExportateur,
                                 'MandataireExportateur' => $MandataireExportateur);
 
-            $res = $this -> Exportateur_model -> save($info_exportateur, $IDExportateur ? $IDExportateur : null );
+            $res = $this -> Exportateur_Model ->save($info_exportateur, $IDExportateur ? $IDExportateur : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));
@@ -38,7 +38,7 @@ class Exportateur extends ANR_Controller {
     }
 
     public function supprimer_exportateur($id_exportateur) {
-        $res = $this -> Exportateur_model -> delete($id_exportateur);
+        $res = $this -> Exportateur_Model ->delete($id_exportateur);
         if($res)
         {
             echo json_encode(array("status" => 1 ));

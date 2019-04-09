@@ -8,16 +8,16 @@ class Exportation extends ANR_Controller {
    protected $page_title = "Gestion de l'exportation";
 
     protected $_folder = "exportation/";
-    protected $_models = array('Exportation_model');
+    protected $_models = array('Exportation_Model');
     
     public function index() {
-        $exportations= $this->Exportation_model->get_exportation();
+        $exportations= $this->Exportation_Model->get_exportation();
         $this->loadData('exportations',$exportations);
         $this -> loadPage('accueil');
     }
 
     public function load_exportateur($type) {
-        $exportateurs = $this -> Exportation_model -> get_exportateur($type);
+        $exportateurs = $this -> Exportation_Model ->get_exportateur($type);
         $options_exportateurs = "";
         foreach($exportateurs as $exp) {
             $options_exportateurs .= "<option value = '".$exp['id']."'>".$exp['nom_prenom']."</option>";
@@ -59,7 +59,7 @@ class Exportation extends ANR_Controller {
                     $info_exportation['IDCollecteurCat2'] = $IDExportateur;
                     break;
             }
-            $res = $this -> Exportation_model -> save($info_exportation, $IDExportation ? $IDExportation : null );
+            $res = $this -> Exportation_Model ->save($info_exportation, $IDExportation ? $IDExportation : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));
@@ -67,7 +67,7 @@ class Exportation extends ANR_Controller {
     }
 
     public function supprimer_exportation($id_exportation) {
-        $res = $this -> Exportation_model -> delete($id_exportation);
+        $res = $this -> Exportation_Model ->delete($id_exportation);
         if($res)
         {
             echo json_encode(array("status" => 1 ));

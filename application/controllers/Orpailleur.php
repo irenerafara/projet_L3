@@ -8,7 +8,7 @@ class Orpailleur extends ANR_Controller {
     protected $page_title = "Gestion des orpailleurs";
 
     protected $_folder = "orpailleur/";
-    protected $_models = array('Orpailleur_model');
+    protected $_models = array('Orpailleur_Model');
 
     public function index() {
         $orpailleurs= $this->Orpailleur_model->get();
@@ -28,7 +28,7 @@ class Orpailleur extends ANR_Controller {
                                 'DuplicataCINOrpailleur' => $DuplicataCINOrpailleur,
                                 'ContactOrpailleur' => $ContactOrpailleur,
                                 'AdresseOrpailleur' => $AdresseOrpailleur);
-            $res = $this -> Orpailleur_model -> save_orpailleur($info_orpailleur, $IDOrpailleur ? $IDOrpailleur : null );
+            $res = $this -> Orpailleur_Model -> save_orpailleur($info_orpailleur, $IDOrpailleur ? $IDOrpailleur : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));
@@ -36,7 +36,7 @@ class Orpailleur extends ANR_Controller {
     }
 
     public function supprimer_orpailleur($id_orpailleur) {
-        $res = $this -> Orpailleur_model -> delete_orpailleur($id_orpailleur);
+        $res = $this -> Orpailleur_Model -> delete_orpailleur($id_orpailleur);
         if($res)
         {
             echo json_encode(array("status" => 1 ));

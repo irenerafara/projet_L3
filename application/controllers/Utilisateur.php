@@ -8,15 +8,15 @@ class Utilisateur extends ANR_Controller {
     protected $page_title = "Gestion des utilisateurs";
 
     protected $_folder = "utilisateur/";
-    protected $_models = array('User_model');
+    protected $_models = array('User_Model');
 
     public function index() {
         if($_POST) extract($_POST);
         if(isset($search)) {
-            $utilisateurs = $this->User_model->get_where($search);
+            $utilisateurs = $this->User_Model->get_where($search);
             $this -> loadData('search_criteria', $search);
         } else {
-            $utilisateurs = $this->User_model->get();
+            $utilisateurs = $this->User_Model->get();
         }
         $this->loadData('utilisateurs',$utilisateurs);
         $this -> loadPage('accueil');
@@ -41,7 +41,7 @@ class Utilisateur extends ANR_Controller {
                                 'TypeUtilisateur' => $TypeUtilisateur,
                                 'EmailUtilisateur' => $EmailUtilisateur);
             }
-            $res = $this -> User_model -> save($info_user, $IDUtilisateur ? $IDUtilisateur : null );
+            $res = $this -> User_Model ->save($info_user, $IDUtilisateur ? $IDUtilisateur : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));
@@ -49,7 +49,7 @@ class Utilisateur extends ANR_Controller {
     }
 
     public function supprimer_utilisateur($id_user) {
-        $res = $this -> User_model -> delete($id_user);
+        $res = $this -> User_Model ->delete($id_user);
         if($res)
         {
             echo json_encode(array("status" => 1 ));
