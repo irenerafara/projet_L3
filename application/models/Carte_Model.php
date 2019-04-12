@@ -1,4 +1,4 @@
-<?php
+git<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 /* Author: Jorge Torres
  * Description: Login model class
