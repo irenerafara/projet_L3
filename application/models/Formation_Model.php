@@ -14,20 +14,29 @@ class Formation_Model extends ANR_Model{
     }
 
     public function get_formations() {
-        $formations = $this -> db -> select('commune.NomCommune, formation.*, (select count(*) from effectuer_formation where IDFormation = formation.IDFormation) as nbformateur, (select ( (select count(*) from assister_orpailleur where IDFormation = formation.IDFormation) + (select count(*) from assister_collecteurcat1 where IDFormation = formation.IDFormation))) as nbassistant ') -> from('formation') 
-                                -> join('commune', 'commune.IDCommune = formation.IDCommune') 
-                                -> get() -> result_array();
+        $formations = $this -> db -> select('commune.NomCommune, formation.*, (select count(*) from effectuer_formation where IDFormation = formation.IDFormation) as nbformateur, (select ( (select count(*) from assister_orpailleur where IDFormation = formation.IDFormation) + (select count(*) from assister_collecteurcat1 where IDFormation = formation.IDFormation))) as nbassistant ') 
+                                  -> from('formation') 
+                                  -> join('commune', 'commune.IDCommune = formation.IDCommune') 
+                                  -> get() 
+                                  -> result_array();
         return $formations;
         
     }
     
     public function get_communes(){
-        $communes = $this->db->select('commune.*')->from('commune')->get()->result_array();
+        $communes = $this->db->select('commune.*')
+                             ->from('commune')
+                             ->get()
+                             ->result_array();
         return $communes;
     }  
 
     public function get_utilisateurs($id = null){
-        $utilisateurs = $this->db->select('utilisateur.*') -> where("IDUtilisateur not in (select IDUtilisateur from effectuer_formation where IDFormation = '$id')") ->from('utilisateur')->get()->result_array();
+        $utilisateurs = $this->db->select('utilisateur.*') 
+                                 -> where("IDUtilisateur not in (select IDUtilisateur from effectuer_formation where IDFormation = '$id')") 
+                                 ->from('utilisateur')
+                                 ->get()
+                                 ->result_array();
         return $utilisateurs;
     }
 
@@ -36,22 +45,27 @@ class Formation_Model extends ANR_Model{
                                 -> from('effectuer_formation')
                                 -> join('utilisateur', 'utilisateur.IDUtilisateur = effectuer_formation.IDUtilisateur')
                                 -> where("IDFormation", $id)
-                                -> get() -> result_array();
+                                -> get() 
+                                -> result_array();
         return $utilisateurs;
  
     }
 
     public function get_collecteurcat1s($id = null){
-        $collecteurcat1s = $this -> db -> select('collecteur_cat1.*') -> where("IDCollecteurCat1 not in (select IDCollecteurCat1 from assister_collecteurcat1 where IDFormation = '$id')") 
-                                    -> from('collecteur_cat1')
-                                    -> get() -> result_array();
+        $collecteurcat1s = $this -> db -> select('collecteur_cat1.*') 
+                                       -> where("IDCollecteurCat1 not in (select IDCollecteurCat1 from assister_collecteurcat1 where IDFormation = '$id')") 
+                                       -> from('collecteur_cat1')
+                                       -> get() 
+                                       -> result_array();
         return $collecteurcat1s;
     }
 
     public function get_orpailleurs($id = null){
-        $collecteurcat1s = $this -> db -> select('orpailleur.*') -> where("IDOrpailleur not in (select IDOrpailleur from assister_orpailleur where IDFormation = '$id')") 
-                                    -> from('orpailleur')
-                                    -> get() -> result_array();
+        $collecteurcat1s = $this -> db -> select('orpailleur.*') 
+                                       -> where("IDOrpailleur not in (select IDOrpailleur from assister_orpailleur where IDFormation = '$id')") 
+                                       -> from('orpailleur')
+                                       -> get() 
+                                       -> result_array();
         return $collecteurcat1s;
     }
 

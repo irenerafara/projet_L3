@@ -27,7 +27,8 @@ class Orpailleur extends ANR_Controller {
                                 'DateCINOrpailleur' => $DateCINOrpailleur,
                                 'DuplicataCINOrpailleur' => $DuplicataCINOrpailleur,
                                 'ContactOrpailleur' => $ContactOrpailleur,
-                                'AdresseOrpailleur' => $AdresseOrpailleur);
+                                'AdresseOrpailleur' => $AdresseOrpailleur
+                            );
             $res = $this -> Orpailleur_Model -> save_orpailleur($info_orpailleur, $IDOrpailleur ? $IDOrpailleur : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {

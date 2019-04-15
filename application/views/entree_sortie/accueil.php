@@ -1,4 +1,6 @@
-<div id='collecteurcat1-content' class = "row">
-<div class = "col-md-12">
-</div>
+
+<div id='entreesortie-form' class ="col-md-12">
+    <div class = "col-md-12">
+        <h2>Entree et sortie</h2>
+    </div>
 </div>
