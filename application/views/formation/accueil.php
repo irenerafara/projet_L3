@@ -12,8 +12,8 @@
           <table class="table table-bordered" IDFormation="dataTable" width="100%" cellspacing="0">
             <thead>
               <tr>
-              <th>Commune</th>
-                <th>Date debut</th>
+                <th>Commune</th>
+                <th>Date début</th>
                 <th>Date fin</th>
                 <th>Motif</th>
                 <th>Détail</th>

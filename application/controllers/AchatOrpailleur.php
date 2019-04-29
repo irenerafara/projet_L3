@@ -24,9 +24,8 @@ class AchatOrpailleur extends ANR_Controller {
         if($_POST) {
             extract($_POST);
             $info_achatorpailleur = array('IDAchatOrpailleur' => $IDAchatOrpailleur,
-                                
-                                'IDOrpailleur' => $IDOrpailleur,
                                 'IDComptoirDeFonte' => $IDComptoirDeFonte,
+                                'IDOrpailleur' => $IDOrpailleur,
                                 'Date' => $Date,
                                 'Quantite' => $Quantite,
                                 'PrixUnitaire' => $PrixUnitaire,

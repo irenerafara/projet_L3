@@ -12,10 +12,20 @@
         <input type="hidden" class="form-control" id="IDFormation" name ="IDFormation">
         <!-- Modal body -->
         <div class="modal-body">
-         
+        <div class="form-group form-inline">
+            <label class = "col-sm-6" for="IDCommune">Commune</label>
+            <select class="form-control" validation-type = "commune" id="IDCommune" name="IDCommune" required>
+              <?php foreach($communes as $commune){
+              extract($commune); ?>
+              <option  value = "<?php echo $IDCommune; ?>">
+                <?php echo $NomCommune; ?>
+              </option>
+              <?php } ?>
+            </select>
+          </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateDebutFormation">Date Début</label>
-              <input type="date" class="form-control" id="DateDebutFormation" name="DateDebutFormation" aria-describedby="NomHelp" placeholder="" required>
+              <input type="date" class="form-control" id="DateDebutFormation" name="DateDebutFormation" placeholder="" required>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="DateFinFormation">Date Fin</label>

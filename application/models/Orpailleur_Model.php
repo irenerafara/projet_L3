@@ -11,6 +11,13 @@ class Orpailleur_Model extends ANR_Model{
     function __construct(){
         parent::__construct();
     }
+    public function get_where($search_criteria) {
+        $orpailleurs = $this -> db -> where('NomOrpailleur like', "%$search_criteria%")
+                                -> or_where('PrenomOrpailleur like', "%$search_criteria%")
+                                -> get($this -> _table)
+                                -> result_array();
+        return $orpailleurs;
+    }
     public function save_orpailleur($data_to_save, $id = null){ 
         if($id) {
             return $this -> db -> where('IDOrpailleur', $id) -> update('orpailleur', $data_to_save);

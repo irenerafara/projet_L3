@@ -106,5 +106,12 @@ class Formation_Model extends ANR_Model{
             return $this -> db -> where($table == "assister_orpailleur" ? "IDOrpailleur" : 'IDCollecteurCat1', $iduser) -> where('IDFormation', $idformation) -> delete($table);
         }
     }
+    public function save($data_to_save, $id = null){ 
+        if($id) {
+            return $this -> db -> where('IDFormation', $id) -> update('formation', $data_to_save);
+        } else {
+            return $this -> db -> insert('formation', $data_to_save);
+        }
+    } 
 }
 ?>

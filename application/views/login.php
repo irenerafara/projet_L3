@@ -1,7 +1,7 @@
 
 <div id='login-form' class = "row">
     <form action="Authentification" method='post' name='process' enctype="multipart/form-data">
-        <h2>Authentification</h2>
+        <h2>ANOR</h2>
         <br />    
         <div class = "alert alert-danger" <?php if(!isset($erreur)) echo 'style = "display: none"' ?> ><?php if(isset($erreur)) echo $erreur; ?></div>
         <div class = "form-group form-inline">

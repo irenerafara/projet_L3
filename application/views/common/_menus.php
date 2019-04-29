@@ -59,9 +59,34 @@
         <i class="fas fa-align-justify"></i>
           <span>Carte</span></a>
      </li>
-     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('index.php/entree_sortie') ?>">
-        <i class="fas fa-arrows-alt"></i>
-          <span>Entrée_Sortie</span></a>
-     </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-address-book"></i>
+          <span>Entrée_Sortie</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatorpailleur') ?>">comptoirfonte/orpailleur</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcfcol1') ?>">comptoirfonte/collectcat1</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcfcol2') ?>">comptoirfonte/collectcat2</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcfcc') ?>">comptoirfonte/comptoircomm</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcol1') ?>">comptoircomm/collectcat1</a></h6>
+          <div class="dropdown-divider"></div>
+          
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatccorp') ?>">comptoircomm/orpailleur</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcccol2') ?>">comptoircomm/collectcat2</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcol2orp') ?>">collectcat2/orpailleur</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcol2col1') ?>">collectcat2/collectcat1</a></h6>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"> <a href="<?php echo base_url('index.php/achatcol1orp') ?>">collectcat1/orpailleur</a></h6>
+          <div class="dropdown-divider"></div>
+
+        </div>
+      </li>
     </ul>

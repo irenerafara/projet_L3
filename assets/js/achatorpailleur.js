@@ -28,25 +28,38 @@ $(document).ready(function() {
         $('#form-save-achatorpailleur input').val('')
         
     })
+})
+    $('#PrixUnitaire, #Quantite').on('keyup',function(){
+        var quantite = $('#Quantite').val()
+        var prixUnitaire = $('#PrixUnitaire').val()
+        if (quantite != "" && prixUnitaire != "") {
+            quantite = parseFloat(quantite)
+            prixUnitaire = parseFloat(prixUnitaire)
+            $('#PrixTotale').val(quantite*prixUnitaire*1000)
 
+        }
 })
 
 function edit_achatorpailleur(id) {
     var tr = $('#achatorpailleur-'+id)
-    $('#form-save-achatorpailleur .modal-title').html('Editer achatorpailleur')
-    $('#IDOrpailleur').val(id)
-    $('#IDComptoirDeFonte').val(id)
-    $('#Date').val(tr.find('td').eq(0).html())
-    $('#Quantite').val(tr.find('td').eq(1).html())
-    $('#PrixUnitaire').val(tr.find('td').eq(2).html())
-    $('#PrixTotale').val(tr.find('td').eq(3).html())
-    $('#addCollecteurCat1Modal').modal('show')
+    var info = tr.attr('id').split('-')
+    $('#form-save-achatorpailleur .modal-title').html('Editer achatorpailleur');
+    $('#IDAchatOrpailleur').val(info[1])
+    
+    $('#IDComptoirDeFonte').val(tr.find('td').eq(0).html())
+    $('#IDOrpailleur').val(tr.find('td').eq(1).html())
+    $('#Date').val(tr.find('td').eq(2).html())
+    $('#Quantite').val(tr.find('td').eq(3).html())
+    $('#PrixUnitaire').val(tr.find('td').eq(4).html())
+    $('#PrixTotale').val(tr.find('td').eq(5).html())
+    $('#addachatorpailleurModal').modal('show')
 }
 
+
 function delete_achatorpailleur(id) {
-    if(confirm('Voulez-vous supprimer cet achat orpailleur ?')) {
+    if(confirm('Voulez-vous supprimer cet achatorpailleur ?')) {
         $.ajax({
-            url: base_url(true)+"achatorpailleur/supprimer_collecteur_cat1/"+id,
+            url: base_url(true)+"achatorpailleur/supprimer_achatorpailleur/"+id,
             type: "POST",
             dataType: "JSON",
             success: function(data) {

@@ -13,6 +13,11 @@ class AchatOrpailleur_Model extends ANR_Model{
     }
 
     public function get_achatorpailleurs() {
+        //$query = $this -> db -> select('acheter_orpailleur_comptoirdefonte.*,
+        //(select concat(NomSocieteComptoirDeFonte, " ", MandataireComptoirDeFonte) from acheter_orpailleur_comptoirdefonte where IDComptoirDeFonte =acheter_orpailleur_comptoirdefonte.IDComptoirDeFonte) as nom_prenomcf,
+        //(select concat(NomOrpailleur, " ", PrenomOrpailleur) from orpailleur where IDOrpailleur = acheter_orpailleur_comptoirdefonte.IDOrpailleur) as nom_prenomorp') -> get('acheter_orpailleur_comptoirdefonte');
+      //return  $query -> result_array();
+        
         $achatorpailleurs = $this -> db -> select('orpailleur.NomOrpailleur, achatorpailleur.*') -> from('achatorpailleur') 
                                 -> join('orpailleur', 'orpailleur.IDOrpailleur = achatorpailleur.IDOrpailleur', 'inner') 
                                 -> get() -> result_array();
@@ -30,7 +35,10 @@ class AchatOrpailleur_Model extends ANR_Model{
         return $comptoirfontes;
     }
     public function get_comptoirfonte(){
-        $comptoirfontes = $this->db->select('comptoir_de_fonte.*')->from('comptoir_de_fonte')->get()->result_array();
+        $comptoirfontes = $this->db->select('comptoir_de_fonte.*')
+                                   ->from('comptoir_de_fonte')
+                                   ->get()
+                                   ->result_array();
         return $comptoirfontes;
     }
     public function save_achatorpailleur($data_to_save, $id = null) {

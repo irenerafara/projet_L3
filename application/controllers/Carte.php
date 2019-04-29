@@ -11,40 +11,74 @@ class Carte extends ANR_Controller {
     protected $_models = array('Carte_Model');
 
     public function index() {
-        $communes= $this -> Carte_Model -> get_commune();
-        $collecteurcat1s= $this -> Carte_Model -> get_collecteurcat1();
-        $collecteurcat2s= $this -> Carte_Model -> get_collecteurcat2();
-        $comptoirfontes= $this -> Carte_Model -> get_comptoirfonte();
-        $comptoircommerciales= $this -> Carte_Model -> get_comptoircommerciale();
-        $orpailleurs= $this -> Carte_Model -> get_orpailleur();
-        $cartes= $this -> Carte_Model -> get_cartes();
+        $communes= $this -> Carte_Model -> get_communes();
+        $cartes= $this -> Carte_Model -> get_carte();
         $this->loadData('communes',$communes);
-        $this->loadData('collecteurcat1s',$collecteurcat1s);
-        $this->loadData('collecteurcat2s',$collecteurcat2s);
-        $this->loadData('comptoirfontes',$comptoirfontes);
-        $this->loadData('comptoircommerciales',$comptoircommerciales);
-        $this->loadData('orpailleurs',$orpailleurs);
         $this->loadData('cartes',$cartes);
         $this -> loadPage('accueil');
+    }
+    public function load_collecteur_cat1($type) {
+        $collecteurcat1s = $this -> Carte_Model ->get_collecteurcat1($type);
+        $options_collecteurcat1s = "";
+        foreach($collecteurcat1s as $col1) {
+            $options_collecteurcat1s .= "<option value = '".$col1['id']."'>".$col1['nom_prenom']."</option>";
+        }
+        echo $options_collecteurcat1s;
     }
 
     public function Enregistrer_carte() {
         if($_POST) {
             extract($_POST);
-            $info_carte = array('IDCommune' => $IDCommune,
-                                'IDCollecteurCat1'=> $IDCollecteurCat1,
-                                'IDCollecteurCat2' => $IDCollecteurCat2,
-                                'IDComptoirDeFonte'=> $IDComptoirDeFonte,
-                                'IDComptoirCommerciale'=> $IDComptoirCommerciale,
-                                'IDOrpailleur'=> $IDOrpailleur,
+            $info_carte = array('IDCommune' => $IDCommune,            
                                 'NumCarte' => $NumCarte,
                                 'DateDemandeCarte' => $DateDemandeCarte,
                                 'DateObtentionCarte' => $DateObtentionCarte,
                                 'DateExpirationCarte' => $DateExpirationCarte,
-                                'Statut' => $Statut,
-                                
-                            );
-            $res = $this -> Carte_Model -> save($info_carte, $IDCarte ? $IDCarte : null );
+                                'StatutCarte' => $StatutCarte);
+                                switch($TypeCollecteurCat1) {
+                                    case 1: 
+                                        $info_carte['IDOrpailleur'] = null;
+                                        $info_carte['IDComptoirComm'] = null;
+                                        $info_carte['IDComptoirDeFonte'] = null;
+                                        $info_carte['IDCollecteurCat2'] = null;
+                                        $info_carte['IDCollecteurCat1'] = $IDCollecteurCat1;
+                                        
+                                        break;
+                                    case 2: 
+                                    $info_carte['IDOrpailleur'] = null;
+                                    $info_carte['IDComptoirComm'] = null;
+                                    $info_carte['IDComptoirDeFonte'] = null;
+                                    $info_carte['IDCollecteurCat1'] = null;
+                                    $info_carte['IDCollecteurCat2'] = $IDCollecteurCat1;
+                                   
+                                        break;
+                                    case 3: 
+                                    $info_carte['IDOrpailleur'] = null;
+                                    $info_carte['IDComptoirComm'] = null;
+                                    $info_carte['IDCollecteurCat1'] = null;
+                                    $info_carte['IDCollecteurCat2'] = null;
+                                    $info_carte['IDComptoirDeFonte'] = $IDCollecteurCat1;
+                                    
+                                        break;
+                                    case 4: 
+                                    $info_carte['IDOrpailleur'] = null;
+                                    $info_carte['IDCollecteurCat1'] = null;
+                                    $info_carte['IDCollecteurCat2'] = null;
+                                    $info_carte['IDComptoirDeFonte'] = null;
+                                    $info_carte['IDComptoirComm'] = $IDCollecteurCat1;
+                                    
+                                        break;
+                                    case 5: 
+                                        $info_carte['IDCollecteurCat1'] = null;
+                                        $info_carte['IDCollecteurCat2'] = null;
+                                        $info_carte['IDComptoirDeFonte'] = null;
+                                        $info_carte['IDComptoirComm'] = null;
+                                        $info_carte['IDOrpailleur'] = $IDCollecteurCat1;
+                                       
+                                            break;
+                                    
+                                }
+            $res = $this -> Carte_Model -> save_carte($info_carte, $IDCarte ? $IDCarte : null );
             echo json_encode(array('status' => $res ? 1 : 0, "message" => $res ? "Enregistré" : "Echec de l'enregistrement"));
         } else {
             echo json_encode(array("status" => 0, "message" => "Aucun paramètre envoyé"));

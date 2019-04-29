@@ -13,22 +13,6 @@
         <!-- Modal body -->
         <div class="modal-body">
        
-        <div class="form-group form-inline">
-            <label class = "col-sm-6" for="IDOrpailleur">orpailleur</label>
-            <select class="form-control" validation-type = "orpailleur" id="IDOrpailleur" name="IDOrpailleur" required>
-              <?php foreach($orpailleurs as $orpailleur)
-                {
-              extract($orpailleur); 
-              ?>
-              <option  value = "<?php echo $IDOrpailleur; ?>">
-                <?php echo $NomOrpailleur; ?>
-              </option>
-              <?php
-
-                }
-             ?>
-            </select>
-          </div>
            
           <div class="form-group form-inline">
             <label class = "col-sm-6" for="IDComptoirDeFonte">comptoir de fonte</label>
@@ -46,23 +30,40 @@
              ?>
             </select>
           </div>
+          
+        <div class="form-group form-inline">
+            <label class = "col-sm-6" for="IDOrpailleur">orpailleur</label>
+            <select class="form-control" validation-type = "orpailleur" id="IDOrpailleur" name="IDOrpailleur" required>
+              <?php foreach($orpailleurs as $orpailleur)
+                {
+              extract($orpailleur); 
+              ?>
+              <option  value = "<?php echo $IDOrpailleur; ?>">
+                <?php echo $NomOrpailleur; ?>
+              </option>
+              <?php
+
+                }
+             ?>
+            </select>
+          </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="Date">Date</label>
               <input type="date" class="form-control" id="Date" name = "Date" placeholder="" >
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
-              <label class = "col-sm-6" for="Quantite">Quantite</label>
+              <label class = "col-sm-6" for="Quantite">Quantite(kg)</label>
               <input type="text"  class="form-control" id="Quantite" name = "Quantite" placeholder=""> 
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
-              <label class = "col-sm-6" for="PrixUnitaire">Prix unitaire</label>
+              <label class = "col-sm-6" for="PrixUnitaire">Prix unitaire(Ariary/g)</label>
               <input type="text"  class="form-control" id="PrixUnitaire" name = "PrixUnitaire" placeholder="" >
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
-              <label class = "col-sm-6" for="PrixTotale">Prix totale</label>
+              <label class = "col-sm-6" for="PrixTotale">Prix totale(Ariary)</label>
               <input type="text"  class="form-control" id="PrixTotale" name = "PrixTotale" placeholder="" >
               <small class="form-text text-muted error"></small>
           </div>

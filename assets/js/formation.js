@@ -139,13 +139,14 @@ $(document).ready(function() {
                 success: function(data) {
                     if(data.status == 1) {
                         li.remove()
-                        $('#assistants .wrapper-affected ul').append('<li class="list-group-item d-flex justify-content-between align-items-center" type-assistant = "'+typeAssistant+'">'+
+                        $('#assistants .wrapper-affected ul').append('<li class="list-group-item d-flex justify-content-between align-items-center" type-assistant = '+typeAssistant['type']+'">'+
                                                                         '<span class = "nom-prenom">'+nomPrenom+'</span>'+
-                                                                        '<i class="fas fa-user-times remove-assistant float-right" id = "rmassist-'+iduser+'"></i>'+
+                                                                        '<i class="fas fa-user-times float-right remove-assistant" id = "rmuser-'+iduser+'"></i>'+
                                                                     '</li>')
                     } else {
                         alert('Une erreur s\'est produite ')
                     }
+                   
                 },
                 error: function() {
                     alert('Echec de l\'affectation')
@@ -166,6 +167,7 @@ $(document).on('click', '.remove-assistant', function() {
         data: {iduser: iduser, idformation: idformation, type: "delete", infos: typeAssistant == 1 ? "assister_collecteurcat1" : "assister_orpailleur"},
         dataType: "JSON",
         success: function(data) {
+           
             if(data.status == 1) {
                 li.remove()
                 $('#assistants .wrapper-affect ul').append('<li class="list-group-item d-flex justify-content-between align-items-center">'+
@@ -174,7 +176,8 @@ $(document).on('click', '.remove-assistant', function() {
                                                                     nomPrenom+
                                                                 '</label>'+
                                                             '</li>')
-            } else {
+            }
+             else {
                 alert("Une erreur s'est produite")
             }
         },
