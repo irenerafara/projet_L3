@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#form-save-collecteurcat2').on('submit', function(e) {
         e.preventDefault();
-        if(form_validate('#form-save-collecteur_cat2')){
+        if(form_validate('#form-save-collecteurcat2')){
             var formdata = $( this ).serialize()
             $.ajax({
                 url: base_url(true)+"collecteur/enregistrer_collecteur_cat2",
