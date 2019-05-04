@@ -176,10 +176,29 @@ $(document).on('click', '.remove-assistant', function() {
                                                                     nomPrenom+
                                                                 '</label>'+
                                                             '</li>')
-            }
-             else {
-                alert("Une erreur s'est produite")
-            }
+            
+            
+                                                        }
+                                                        else if(data.status == 2) {
+                                                            li.remove()
+                $('#collecteurcat1s .wrapper-affect ul').append('<li class="list-group-item d-flex justify-content-between align-items-center">'+
+                                                                '<input type = "checkbox" id = "collecteurcat1-'+idcollecteurcat1+'">'+
+                                                                '<label for = "collecteurcat1-'+idcollecteurcat1+'">'+
+                                                                    nomPrenom+
+                                                                '</label>'+
+                                                            '</li>')
+                                                       }
+
+                                                       else if(data.status == 3) {
+                                                        li.remove()
+              $('#orpailleurs .wrapper-affect ul').append('<li class="list-group-item d-flex justify-content-between align-items-center">'+
+                                                            '<input type = "checkbox" id = "orpailleur-'+idorpailleur+'">'+
+                                                            '<label for = "orpailleur-'+idorpailleur+'">'+
+                                                                nomPrenom+
+                                                            '</label>'+
+                                                        '</li>')
+                                                   }
+               
         },
         error: function() {
             alert('Echec de la désaffectation')
