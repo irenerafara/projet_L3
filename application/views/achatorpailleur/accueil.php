@@ -25,18 +25,7 @@
           
           <?php foreach($achatorpailleurs as $achatorpailleur){
               extract((array) $achatorpailleur);
-             // if(isset($IDComptoirDeFonte)) {
-               // $idComptoirDeFonte = "$IDComptoirDeFonte";
-               // $ComptoirDeFonte = 1;
-               // $ComptoirDeFonte = "comptoir_de_fonte";
-               // $NomSocieteComptoirDeFonte = "$NomSocieteComptoirDeFonte";
-             // }
-             // if(isset($IDOrpailleur)) {
-               // $idOrpailleur = "$IDOrpailleur";
-               // $Orpailleur = 2;
-               // $Orpailleur = "orpailleur";
-               // $NomOrpailleur = "$NomOrpailleur";
-              //}
+             
               ?>
               
                <?php

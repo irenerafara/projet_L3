@@ -1,3 +1,6 @@
 .btn-edit {
     margin-right: 10px;
 }
+#form-save-achatcfcc select, #form-save-achatcfcc input[type=number] {
+    width: 225px;
+}

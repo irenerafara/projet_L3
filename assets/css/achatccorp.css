@@ -1,3 +1,6 @@
 .btn-edit {
     margin-right: 10px;
 }
+#form-save-achatccorp select, #form-save-achatccorp input[type=number] {
+    width: 225px;
+}

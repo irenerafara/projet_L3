@@ -63,12 +63,9 @@
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="StatutCarte">Statut</label>
-              <input type="text"  class="form-control" id="StatutCarte" name = "StatutCarte" placeholder="">
+              <input type="text"  class="form-control" id="StatutCarte" name = "StatutCarte" placeholder="" required>
               <small class="form-text text-muted error"></small>
-          </div>
-          
-         
-          
+          </div>  
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>

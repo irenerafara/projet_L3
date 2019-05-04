@@ -2,7 +2,7 @@
 
 class Collecteur extends ANR_Controller {
 
-    protected $_css = array("collecteur1.css");
+    protected $_css = array("collecteur1.css","collecteur2.css");
     protected $_js = array('collecteur1.js','collecteur2.js');
 
     protected $page_title = "Gestion de collecteur";

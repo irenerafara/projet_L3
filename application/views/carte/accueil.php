@@ -53,7 +53,7 @@
               }
                if(isset($IDCommune)) {
                 $idCommune = "$IDCommune";
-                $Commune = 5;
+                $Commune = 6;
                 $Commune = "Commune";
                 $NomCommune = "$NomCommune";
               }

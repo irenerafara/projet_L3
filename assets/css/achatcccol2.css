@@ -1,3 +1,6 @@
 .btn-edit {
     margin-right: 10px;
 }
+#form-save-achatcccol2 select, #form-save-achatcccol2 input[type=number] {
+    width: 225px;
+}

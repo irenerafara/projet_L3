@@ -48,7 +48,7 @@ function edit_achatorpailleur(id) {
     
     $('#IDComptoirDeFonte').val(tr.find('td').eq(0).html())
     $('#IDOrpailleur').val(tr.find('td').eq(1).html())
-    $('#Date').val(tr.find('td').eq(2).html())
+    $('#Date').val($.trim(tr.find('td').eq(2).html()))
     $('#Quantite').val(tr.find('td').eq(3).html())
     $('#PrixUnitaire').val(tr.find('td').eq(4).html())
     $('#PrixTotale').val(tr.find('td').eq(5).html())

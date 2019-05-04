@@ -54,17 +54,17 @@
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="Quantite">Quantite(kg)</label>
-              <input type="text"  class="form-control" id="Quantite" name = "Quantite" placeholder=""> 
+              <input type="number"  step="0.01"  class="form-control" id="Quantite" name = "Quantite" placeholder="" required> 
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrixUnitaire">Prix unitaire(Ariary/g)</label>
-              <input type="text"  class="form-control" id="PrixUnitaire" name = "PrixUnitaire" placeholder="" >
+              <input type="number"  step="0.01"  class="form-control" id="PrixUnitaire" name = "PrixUnitaire" placeholder="" required >
               <small class="form-text text-muted error"></small>
           </div>
           <div class="form-group form-inline">
               <label class = "col-sm-6" for="PrixTotale">Prix totale(Ariary)</label>
-              <input type="text"  class="form-control" id="PrixTotale" name = "PrixTotale" placeholder="" >
+              <input type="number"  step="0.01" class="form-control" id="PrixTotale" name = "PrixTotale" placeholder="" required >
               <small class="form-text text-muted error"></small>
           </div>
           
